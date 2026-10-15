@@ -72,19 +72,100 @@ window.addEventListener("scroll", scrollActive);
 
 /*=============== HERO BOOKING ===============*/
 const bookingForm = document.getElementById("booking-form");
+const whatsappNumber = "543757515793";
 
 if (bookingForm) {
   const fromSelect = bookingForm.elements.from;
   const toSelect = bookingForm.elements.to;
+  const routeGroups = [
+    {
+      label: "Aeropuerto y alojamientos",
+      locations: ["Aeropuerto (IGR)", "Hotel en Iguazú", "Hotel en Foz"],
+    },
+    {
+      label: "Argentina",
+      locations: [
+        "Cataratas Argentinas",
+        "Duty Free",
+        "Minas de Wanda",
+        "Ruinas de San Ignacio",
+        "Saltos del Moconá",
+        "Hito de las Tres Fronteras (Argentina)",
+        "Salto de los Turistas",
+        "La Aripuca",
+        "Güira Oga",
+        "Casa de las Botellas",
+        "Jardín de los Picaflores",
+        "Feirinha de Puerto Iguazú",
+        "Cabalgata Ecológica",
+        "Catamarán Iguazú",
+        "Fly Park",
+        "Bar de Hielo",
+        "Madero Tango",
+      ],
+    },
+    {
+      label: "Brasil",
+      locations: [
+        "Foz do Iguaçu (centro)",
+        "Cataratas Brasileñas",
+        "Parque Nacional do Iguaçu",
+        "Parque das Aves",
+        "Represa Itaipú",
+        "Templo Budista",
+        "Hito de las Tres Fronteras (Brasil)",
+        "Yup Star: Roda Gigante",
+        "Rafain Churrascaria",
+        "Museo de Cera",
+      ],
+    },
+    {
+      label: "Paraguay",
+      locations: [
+        "Ciudad del Este",
+        "Saltos del Monday",
+        "Cellshop Ciudad del Este",
+      ],
+    },
+    { label: "Otro", locations: ["Otro"] },
+  ];
+
+  for (const select of [fromSelect, toSelect]) {
+    for (const { label, locations } of routeGroups) {
+      const group = document.createElement("optgroup");
+      group.label = label;
+
+      for (const location of locations) {
+        const option = document.createElement("option");
+        option.value = location;
+        option.textContent = location;
+        group.append(option);
+      }
+
+      select.append(group);
+    }
+  }
+
   const swapButton = document.getElementById("swap-locations");
   const passengerInput = document.getElementById("passengers");
   const passengerCount = document.getElementById("passenger-count");
   const today = new Date();
+  const timeInput = bookingForm.elements.time;
+  timeInput.value = `${String(today.getHours()).padStart(2, "0")}:${String(today.getMinutes()).padStart(2, "0")}`;
   const localToday = new Date(today.getTime() - today.getTimezoneOffset() * 60000)
     .toISOString()
     .slice(0, 10);
   const dateInput = bookingForm.elements.date;
   dateInput.min = localToday;
+
+  const syncRouteOptions = () => {
+    for (const option of fromSelect.options) {
+      option.disabled = Boolean(option.value && option.value === toSelect.value);
+    }
+    for (const option of toSelect.options) {
+      option.disabled = Boolean(option.value && option.value === fromSelect.value);
+    }
+  };
 
   const validateRoute = () => {
     const sameLocation = fromSelect.value && fromSelect.value === toSelect.value;
@@ -94,6 +175,7 @@ if (bookingForm) {
     toSelect.setCustomValidity(
       sameLocation ? "El origen y el destino deben ser distintos." : "",
     );
+    syncRouteOptions();
   };
 
   fromSelect.addEventListener("change", validateRoute);
@@ -124,17 +206,18 @@ if (bookingForm) {
     if (!bookingForm.reportValidity()) return;
 
     const formData = new FormData(bookingForm);
+    const [year, month, day] = formData.get("date").split("-");
     const message = [
       "Hola, quisiera consultar por un traslado:",
       `Origen: ${formData.get("from")}`,
       `Destino: ${formData.get("to")}`,
-      `Fecha: ${formData.get("date")}`,
+      `Fecha: ${day}/${month}/${year.slice(-2)}`,
       `Hora: ${formData.get("time")}`,
       `Pasajeros: ${formData.get("passengers")}`,
     ].join("\n");
 
     window.open(
-      `https://wa.me/?text=${encodeURIComponent(message)}`,
+      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
       "_blank",
       "noopener,noreferrer",
     );
