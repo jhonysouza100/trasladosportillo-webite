@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0A2342" />
+    <meta name="theme-color" content="#063f85" />
     <link rel="canonical" href="https://trasladosportillo.com/" />
 
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&amp;family=Manrope:wght@400;500;600;650;700;750;800&amp;display=swap" rel="stylesheet" />
@@ -62,14 +62,8 @@
       <nav class="nav container" aria-label="Navegación principal">
         <div class="nav_logo-container">
           <a href="#hero" class="nav_logo">
-            <img src="../public/logo.svg" alt="Traslados Portillo" />
+            <img src="/public/logo.png" alt="Traslados Portillo" />
           </a>
-          <span class="nav_logo-band">
-            <span class="nav_brand-small">TRASLADOS</span>
-            <span class="nav_brand-large"
-              >Portillo<span class="bg_clip-text">.</span>
-            </span>
-          </span>
         </div>
         <div class="nav_menu" id="nav-menu">
           <ul class="nav_list">
@@ -103,7 +97,7 @@
       <section class="hero" id="inicio">
         <div class="hero_image-wrap">
           <img
-            src="https://images.unsplash.com/photo-1671615224828-fc4e75d88f72?auto=format&fit=crop&w=2400&q=90"
+            src="/public/images/hero-bg.jpg"
             class="hero_bg"
             alt="Paisaje de las Cataratas del Iguazú"
           />
@@ -115,21 +109,23 @@
             PUERTO IGUAZÚ, ARGENTINA
           </span>
           <h1 class="hero_title">
-            <span class="hero_title-reveal">
-              <span>Iguazú,</span>
-            </span>
-            <span class="hero_title-reveal bg_clip-text">
-              <span>sin vueltas.</span>
+            <span class="hero_title-small">De</span>
+            <br>
+            CATARATAS
+            <br>
+            <span>
+              <span class="hero_title-small">al</span>
+              <span class="bg_clip-text">
+                AEROPUERTO
+              </span>
             </span>
           </h1>
           <div class="hero_info">
             <p class="hero_info-description">
-              Vos venís por la experiencia.
-              <br />
-              Nosotros te llevamos a vivirla.
+              Punto a punto sin espera, puntualidad garantizada
             </p>
             <p class="hero_info-subdescription">
-              Traslados privados. Gente local. Tu propio ritmo.
+              Traslados privados. Vehículos cómodos y climatizados.
             </p>
             <div class="hero_info-actions">
               <button class="button hero_info-button">
@@ -164,48 +160,58 @@
         <div class="hero_stamp">
           <svg viewBox="0 0 140 140">
             <defs>
+              <!-- ID único del trazado del texto -->
               <path
                 id="circle-text"
                 d="M70,70 m-52,0 a52,52 0 1,1 104,0 a52,52 0 1,1 -104,0"
               ></path>
+              
+              <!-- NUEVO: Gradiente Oro insertado directamente en el SVG -->
+              <linearGradient id="oro-gradiente" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#f4d068" />
+                <stop offset="40%" stop-color="#cfa13b" />
+                <stop offset="70%" stop-color="#ae7f23" />
+                <stop offset="100%" stop-color="#e7c65f" />
+              </linearGradient>
             </defs>
+            
+            <!-- Círculo exterior pintado con el gradiente -->
             <circle
               cx="70"
               cy="70"
               r="68"
               fill="none"
-              stroke="currentColor"
+              stroke="url(#oro-gradiente)"
               stroke-width=".7"
             ></circle>
-            <text>
+            
+            <!-- Texto circular pintado con el gradiente -->
+            <text fill="url(#oro-gradiente)">
               <textPath href="#circle-text" textLength="325">
                 MENOS VUELTAS · MÁS EXPERIENCIAS ·
               </textPath>
             </text>
           </svg>
+  
+          <!-- Icono de flecha Lucide -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="currentColor"
+            stroke="url(#oro-gradiente)"
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
             class="lucide lucide-arrow-up-right"
             aria-hidden="true"
-            x-file-name="Hero"
-            x-line-number="25"
-            x-column="492"
-            x-component="ArrowUpRight"
-            x-id="Hero_25_492"
-            x-dynamic="false"
           >
             <path d="M7 7h10v10"></path>
             <path d="M7 17 17 7"></path>
           </svg>
         </div>
+
 
         <!-- <div class="swiper hero_swiper">
           <div class="swiper-wrapper">
@@ -343,7 +349,7 @@
             </div>
           </div>
           <button class="button booking_button" type="submit">
-            Consultá tu traslado
+            Reserva tu traslado ahora
             <i class="ri-arrow-right-up-line"></i>
           </button>
         </form>
@@ -368,17 +374,20 @@
           <div>
             <p class="section_eyebrow">
               <span class="tiny_line"></span>
-              EL CAMINO TAMBIÉN ES PARTE DEL VIAJE
+              IGUAZÚ TE CONECTA, NOSOTROS DE LLEVAMOS
             </p>
             <h2 class="section_title destinations_title">
-              Un destino para cada plan
-              <span class="bg_clip-text">.</span>
+              Tu traslado
+              <br>
+              <span class="bg_clip-text">
+                Nuestra prioridad
+              </span>
             </h2>
           </div>
           <p class="section_description">
-            De la llegada al último paseo.
+            En Traslados Portillo nos encargamos de que
             <br />
-            Elegí dónde querés estar, nosotros te llevamos.
+            tu viaje sea cómodo, seguro y sin preocupaciones.
           </p>
         </div>
         <div class="destinations_content grid">
@@ -447,7 +456,7 @@
           <div class="destination_card">
             <button class="destination_image">
               <img
-                src="/public/images/aeropuerto-iguazu.webp"
+                src="/public/images/hero-bg.jpg"
                 alt="Avión llegando a Iguazú sobre las Cataratas"
                 loading="lazy"
               />
@@ -488,7 +497,7 @@
                 <i class="ri-plane-line"></i>
                 AEROPUERTO · IGR
               </div>
-              <h3 class="destination_card-title">Del avión a tu descanso</h3>
+              <h3 class="destination_card-title">Del avión a tu destino</h3>
               <p class="destination_card-description">
                 Tu viaje empieza apenas aterrizás. Coordiná el traslado entre el
                 aeropuerto de Puerto Iguazú y tu alojamiento.
@@ -509,7 +518,7 @@
           <div class="destination_card">
             <button class="destination_image">
               <img
-                src="/public/images/hito-3-fronteras-dia.webp"
+                src="/public/images/image-hito-3-fronteras.jpg"
                 alt="Hito de las Tres Fronteras en Puerto Iguazú"
                 loading="lazy"
               />
@@ -572,7 +581,7 @@
           <div class="destination_card">
             <button class="destination_image">
               <img
-                src="/public/images/bg-img-1.webp"
+                src="/public/images/image-traslado-hoteles.jpg"
                 alt="Conducción por una ruta de la región"
                 loading="lazy"
               />
@@ -634,7 +643,7 @@
           <div class="destination_card">
             <button class="destination_image">
               <img
-                src="/public/images/ciudad-del-este.avif"
+                src="/public/images/image-compras-aparaguay.jpg"
                 alt="Duty Free Shop de Puerto Iguazú"
                 loading="lazy"
               />
@@ -709,29 +718,29 @@
 
       <div class="marquee" aria-label="Menos vueltas, más Iguazú">
         <div class="marquee_track">
-          <span>
+          <span class="bg_clip-text">
             MENOS VUELTAS.
             <i class="ri-arrow-right-up-line"></i>
             MÁS IGUAZÚ.
-            <i class="ri-star-line"></i>
+            <i class="ri-star-fill"></i>
           </span>
-          <span>
+          <span class="bg_clip-text">
             MENOS VUELTAS.
             <i class="ri-arrow-right-up-line"></i>
             MÁS IGUAZÚ.
-            <i class="ri-star-line"></i>
+            <i class="ri-star-fill"></i>
           </span>
-          <span>
+          <span class="bg_clip-text">
             MENOS VUELTAS.
             <i class="ri-arrow-right-up-line"></i>
             MÁS IGUAZÚ.
-            <i class="ri-star-line"></i>
+            <i class="ri-star-fill"></i>
           </span>
-          <span>
+          <span class="bg_clip-text">
             MENOS VUELTAS.
             <i class="ri-arrow-right-up-line"></i>
             MÁS IGUAZÚ.
-            <i class="ri-star-line"></i>
+            <i class="ri-star-fill"></i>
           </span>
         </div>
       </div>
@@ -894,7 +903,13 @@
                 <span class="tiny_line"></span>
                 EL ESPACIO PARA TU PRÓXIMA HISTORIA
               </p>
-              <h2 class="section_title">Tu compañía. Nuestro camino</h2>
+              <h2 class="section_title">
+                Tu compañía
+                <br>
+                <span class="bg_clip-text">
+                  Nuestro camino
+                </span>
+              </h2>
             </div>
             <p class="section_description">
               Una flota propia de 4 vehículos.
@@ -915,7 +930,6 @@
                 src="/public/images/car-1.webp"
                 alt="Sedán para traslados de hasta 4 pasajeros, imagen de referencia"
               />
-              <div class="fleet_top-label">ILUSTRACIÓN DE REFERENCIA</div>
               <div class="fleet_card-bottom">
                 <div>
                   <h3>Escapadas bien acompañadas</h3>
@@ -941,7 +955,6 @@
                 src="/public/images/car-4.webp"
                 alt="Van para traslados de hasta 6 pasajeros, imagen de referencia"
               />
-              <div class="fleet_top-label">ILUSTRACIÓN DE REFERENCIA</div>
               <div class="fleet_card-bottom">
                 <div>
                   <h3>Más lugar, más historias</h3>
@@ -974,7 +987,7 @@
               <h2 class="section_title faq_title">
                 Antes de
                 <br />
-                hacer las valijas.
+                hacer las valijas
               </h2>
             </div>
             <p class="section_description">
@@ -1068,6 +1081,7 @@
         </div>
       </section>
 
+      <!--
       <section class="testimonial section container" id="testimonios">
         <div class="grid">
           <div class="section_heading faq_heading">
@@ -1106,6 +1120,7 @@
           </div>
         </div>
       </section>
+      -->
 
       <section class="contact" id="contacto">
         <div class="contact-contours"><i></i><i></i><i></i><i></i></div>
@@ -1150,19 +1165,13 @@
           <div>
             <div class="nav_logo-container">
               <a href="#hero" class="nav_logo">
-                <img src="../public/logo.svg" alt="Traslados Portillo" />
+                <img src="/public/logo.png" alt="Traslados Portillo" />
               </a>
-              <span class="nav_logo-band">
-                <span class="nav_brand-small">TRASLADOS</span>
-                <span class="nav_brand-large"
-                  >Portillo<span class="bg_clip-text">.</span>
-                </span>
-              </span>
             </div>
             <p class="footer_tagline">
-              Un destino extraordinario.
-              <br />
-              Gente de acá para llevarte.
+              Traslados privados
+              <br>
+              Vehículos cómodos y climatizados
             </p>
           </div>
           <div class="footer_links">
@@ -1179,7 +1188,7 @@
               <br />
               Argentina
               <br />
-              <a href="tel:+543757515793">+54 3757 515793</a>
+              <span>+54 3757 515793</span>
             </p>
             <a href="#traslados" class="button hero_info-explore">
               Planeemos tu viaje
