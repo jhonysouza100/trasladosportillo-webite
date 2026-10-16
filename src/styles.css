@@ -2,10 +2,12 @@
 :root {
   --header-height: 3.5rem;
 
-  --background-color: #f6f5ee;
-  --foreground-color: #22362b;
-  --muted-color: #73776d;
-  --container-color: #dedfd3;
+  --background-color: #f4f6f9;
+  --foreground-color: #0a2342;
+  --muted-color: #62748a;
+  --container-color: #e1e8f0;
+  --surface-color: #ffffff;
+  --border-color: #d5dfeb;
 
   /* Gradiente multi-parada con tonos oro metálicos idénticos a la imagen */
   --gradient-color: linear-gradient(
@@ -17,15 +19,15 @@
   );
 
   --primary-color: #0A2342;
-  --primary-muted-color: #4A6572;
-  --secondary-color: #F4F6F9;
+  --primary-muted-color: #496a8a;
+  --secondary-color: #eaf0f7;
   --white-color: #fff;
-  --black-color: #0e0f11;
+  --black-color: #0a2342;
 
-  --opacity-color-30: hsla(0, 0%, 90%, 0.3);
-  --opacity-color-20: hsla(0, 0%, 90%, 0.2);
+  --opacity-color-30: hsla(210, 30%, 90%, 0.3);
+  --opacity-color-20: hsla(210, 30%, 90%, 0.2);
   --body-font: DM Sans, sans-serif;
-  --second-font: Manrope, sans-serif;
+  --display-font: Manrope, sans-serif;
 
   --biggest-font-size: 3rem;
   --big-font-size: 1.5rem;
@@ -151,7 +153,7 @@ svg {
   letter-spacing: -1.6px;
   line-height: 1.17;
   font-weight: 600;
-  font-family: var(--second-font);
+  font-family: var(--display-font);
 }
 .section_description {
   font-size: 13px;
@@ -380,7 +382,7 @@ svg {
 .hero_bg {
   height: 100%;
   object-fit: cover;
-  object-position: 64% center;
+  object-position: right top;
   width: 100%;
 }
 .hero_blur {
@@ -421,7 +423,7 @@ svg {
   line-height: 1.1;
   letter-spacing: -2px;
   font-weight: 700;
-  font-family: var(--second-font);
+  font-family: var(--display-font);
 }
 .hero_title-small {
   font-size: 32px;
@@ -433,7 +435,7 @@ svg {
   line-height: 1.5;
 }
 .hero_info-subdescription {
-  color: #e3e9dbb8;
+  color: #f4f6f9b8;
   font-size: 10px;
   line-height: 1.8;
   max-width: 310px;
@@ -524,7 +526,7 @@ svg {
   text-align: right;
 }
 .hero_coordinates b {
-  color: #e4e9dcb0;
+  color: #f4f6f9b0;
   font-size: 8px;
   font-weight: 400;
 }
@@ -543,7 +545,7 @@ svg {
   margin: auto;
 }
 .hero_swiper-subtitle {
-  font: var(--hero-big-font-size) var(--second-font);
+  font: var(--hero-big-font-size) var(--display-font);
 }
 .hero_swiper-title {
   font-size: var(--hero-biggest-font-size);
@@ -620,7 +622,7 @@ svg {
   background: var(--background-color);
   border: 1px solid var(--container-color);
   border-radius: 8px;
-  box-shadow: 0 10px 24px #26331d09;
+  box-shadow: 0 10px 24px #0a23420f;
   align-items: center;
 }
 .booking_field {
@@ -634,7 +636,7 @@ svg {
 }
 .booking_field i {
   font-size: 18px;
-  color: #72866a;
+  color: var(--primary-muted-color);
   flex-shrink: 0;
 }
 .booking_field > div {
@@ -644,7 +646,7 @@ svg {
 .booking_field label {
   font-size: 9px;
   display: block;
-  color: #7f8276;
+  color: var(--muted-color);
   letter-spacing: 0.2px;
   margin-bottom: 7px;
 }
@@ -673,11 +675,11 @@ svg {
   height: 23px;
 }
 .booking_field select:focus-visible {
-  outline: 2px solid #719848;
+  outline: 2px solid var(--primary-muted-color);
   outline-offset: 5px;
 }
 .booking_field input:focus-visible {
-  outline: 2px solid #719848;
+  outline: 2px solid var(--primary-muted-color);
   outline-offset: 5px;
 }
 .select_wrap {
@@ -700,7 +702,7 @@ svg {
   justify-content: center;
   gap: 11px;
   align-items: center;
-  color: #787e6e;
+  color: var(--muted-color);
   flex-wrap: wrap;
   margin-top: 15px;
   font-size: 8px;
@@ -730,7 +732,7 @@ svg {
 .booking_route-title {
   font-size: 9px;
   display: block;
-  color: #7f8276;
+  color: var(--muted-color);
   letter-spacing: 0.2px;
   margin-bottom: 7px;
 }
@@ -761,7 +763,7 @@ svg {
   height: 30px;
   border-radius: 50%;
   margin-bottom: 1px;
-  background: #f1f3eb;
+  background: var(--secondary-color);
 }
 .booking_swap-button i {
   font-size: 16px;
@@ -776,7 +778,7 @@ svg {
 .booking_passenger-controls button {
   width: 23px;
   height: 23px;
-  border: 1px solid #dadccf;
+  border: 1px solid var(--border-color);
   border-radius: 50%;
   line-height: 1;
 }
@@ -787,7 +789,7 @@ svg {
 }
 .booking_swap-button:focus-visible,
 .booking_passenger-controls button:focus-visible {
-  outline: 2px solid #719848;
+  outline: 2px solid var(--primary-muted-color);
   outline-offset: 2px;
 }
 
@@ -853,7 +855,7 @@ svg {
 }
 .hero-update-route-btn {
   padding: 0.75rem 1rem;
-  background: #111;
+  background: var(--primary-color);
   color: #fff;
   font-weight: 600;
 }
@@ -864,10 +866,10 @@ svg {
   grid-template-columns: 1fr;
 }
 .destination_card {
-  border: 1px solid #dddfd3;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   overflow: hidden;
-  background: #faf9f3;
+  background: var(--surface-color);
   transition: box-shadow 0.3s;
 }
 .destination_image {
@@ -878,7 +880,7 @@ svg {
   aspect-ratio: 1.6;
   border: 0;
   padding: 0;
-  background: #687459;
+  background: var(--primary-color);
   text-align: left;
 }
 .destination_image img img {
@@ -890,9 +892,9 @@ svg {
 .destination_tag {
   position: absolute;
   z-index: 1;
-  background: #f8f7eff0;
+  background: #ffffffed;
   border-radius: 3px;
-  color: var(--forest);
+  color: var(--primary-color);
   letter-spacing: 1px;
   font-weight: 600;
   backdrop-filter: blur(8px);
@@ -945,7 +947,7 @@ svg {
 .destination_card-eyebrow {
   font-size: 8px;
   letter-spacing: 1.4px;
-  color: #7a806c;
+  color: var(--primary-muted-color);
   display: flex;
   gap: 7px;
   align-items: center;
@@ -956,7 +958,7 @@ svg {
 }
 .destination_card-title {
   color: var(--black-color);
-  font-family: var(--second-font);
+  font-family: var(--display-font);
   font-size: 25px;
   letter-spacing: -0.8px;
   font-weight: 550;
@@ -967,14 +969,14 @@ svg {
   font-size: 13px;
   min-height: 0;
   line-height: 1.8;
-  color: #797d71;
+  color: var(--muted-color);
 }
 .destination_card-route {
   font-size: 10px;
   min-height: 0;
   margin-top: 19px;
   margin-bottom: 22px;
-  color: #6b795e;
+  color: var(--primary-muted-color);
   display: flex;
   gap: 6px;
   align-items: center;
@@ -986,13 +988,13 @@ svg {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid #e0e1d6;
+  border-top: 1px solid var(--border-color);
   gap: 10px;
   padding: 18px 0;
 }
 .destination_card-price {
   font-size: 10px;
-  color: #79806d;
+  color: var(--muted-color);
 }
 .destination_card-button {
   display: flex;
@@ -1021,7 +1023,7 @@ svg {
   align-items: center;
   gap: 24px;
   font-size: 11px;
-  color: #828774;
+  color: var(--muted-color);
 }
 .destination_footer span {
   display: flex;
@@ -1039,7 +1041,7 @@ svg {
   display: flex;
   gap: 9px;
   align-items: center;
-  border-bottom: 1px solid #9da58c;
+  border-bottom: 1px solid var(--border-color);
   padding-bottom: 3px;
   color: var(--primary-color);
 }
@@ -1068,7 +1070,7 @@ svg {
   display: flex;
   align-items: center;
   gap: 25px;
-  font-family: var(--second-font);
+  font-family: var(--display-font);
   font-weight: 900;
   font-size: 22px;
   white-space: nowrap;
@@ -1095,7 +1097,7 @@ svg {
   font-size: 47px;
   letter-spacing: -2.2px;
   font-weight: 500;
-  font-family: var(--second-font);
+  font-family: var(--display-font);
   font-size: clamp(30px, 3.25vw, 48px);
   font-weight: 500;
   letter-spacing: -2px;
@@ -1132,7 +1134,7 @@ svg {
 .about_image-shade {
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, #18392eb5, transparent 65%);
+  background: linear-gradient(0deg, #0a2342b5, transparent 65%);
 }
 .about_image-label {
   position: absolute;
@@ -1143,7 +1145,7 @@ svg {
   align-items: center;
   gap: 9px;
   letter-spacing: 1.7px;
-  color: #f0f5df;
+  color: var(--white-color);
 }
 .about_image-label i {
   font-size: 13px;
@@ -1159,7 +1161,7 @@ svg {
   font-size: 23px;
   transform: rotate(5deg);
   padding: 17px;
-  font-family: var(--second-font);
+  font-family: var(--display-font);
   line-height: 1.15;
   letter-spacing: -1.2px;
   box-shadow: 5px 7px 20px #00000015;
@@ -1186,7 +1188,7 @@ svg {
   display: grid;
   place-items: center;
   background: var(--secondary-color);
-  border: 1px solid #dfe5d3;
+  border: 1px solid var(--border-color);
   border-radius: 50%;
   flex-shrink: 0;
   color: var(--primary-color);
@@ -1203,21 +1205,21 @@ svg {
 .about_benefits p {
   font-size: 13px;
   line-height: 1.7;
-  color: #818577;
+  color: var(--muted-color);
   margin-top: 3px;
 }
 
 /* =============== FLEET =============== */
 .fleet {
-  background: #e9ece2;
-  border-top: 1px solid #dfe3d7;
-  border-bottom: 1px solid #dfe3d7;
+  background: var(--background-color);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 .fleet_card {
-  border: 1px solid #d3dacb;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 24px 22px 0;
-  background: #edf0e7;
+  background: var(--surface-color);
   overflow: hidden;
 }
 .fleet_top {
@@ -1230,7 +1232,7 @@ svg {
 .fleet_top span {
   font-size: 9px;
   letter-spacing: 1.8px;
-  color: #708361;
+  color: var(--primary-muted-color);
 }
 .fleet_top-tag {
   display: flex;
@@ -1252,10 +1254,10 @@ svg {
   gap: 15px;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid #d5dccc;
+  border-top: 1px solid var(--border-color);
 }
 .fleet_card-bottom h3 {
-  font-family: var(--second-font);
+  font-family: var(--display-font);
   color: var(--foreground-color);
   font-size: 19px;
   font-weight: 550;
@@ -1264,7 +1266,7 @@ svg {
 }
 .fleet_card-bottom p {
   font-size: 11px;
-  color: #7a8670;
+  color: var(--muted-color);
   line-height: 1.7;
   margin-top: 5px;
 }
@@ -1275,7 +1277,7 @@ svg {
   white-space: nowrap;
   height: 36px;
   width: 36px;
-  border: 1px solid #bdcbb2;
+  border: 1px solid var(--border-color);
   border-radius: 50%;
   padding: 0;
   flex-shrink: 0;
@@ -1293,7 +1295,7 @@ svg {
   align-items: center;
   margin-top: 23px;
   text-align: left;
-  color: #7c8871;
+  color: var(--muted-color);
 }
 .fleet_note i {
   font-size: 15px;
@@ -1305,7 +1307,7 @@ svg {
   align-items: flex-start;
   justify-content: space-between;
   padding: 18px 0;
-  border-bottom: 1px solid #ddd8cc;
+  border-bottom: 1px solid var(--border-color);
   cursor: pointer;
   transition: background 0.3s;
 }
@@ -1335,7 +1337,7 @@ svg {
   display: block;
 }
 .faq_number {
-  font-family: var(--second-font);
+  font-family: var(--display-font);
   font-size: 28px;
   font-style: italic;
   margin-left: 24px;
@@ -1376,7 +1378,7 @@ svg {
   z-index: -1;
 }
 .contact-contours > i {
-  border: 1px solid #d7ed7615;
+  border: 1px solid #f4d06815;
   border-radius: 45% 60% 40% 65%;
   inset: 30px;
   position: absolute;
@@ -1514,7 +1516,7 @@ svg {
   top: 0;
   width: 38px;
   height: 38px;
-  border: 1px solid #77926766;
+  border: 1px solid #f4d06866;
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -1560,15 +1562,15 @@ svg {
   display: flex;
   align-items: center;
   gap: 10px;
-  border: 1px solid #a7be8366;
+  border: 1px solid #f4d06866;
   border-radius: 50px;
-  box-shadow: 0 5px 20px #102e202e;
+  box-shadow: 0 5px 20px #0a23422e;
   color: var(--secondary-color);
   background: var(--primary-color);
 }
 .floating_contact:hover {
   transform: translateY(-4px);
-  background: #29503c;
+  background: var(--primary-muted-color);
 }
 
 /*=============== SCROLL BAR ===============*/
@@ -1607,13 +1609,13 @@ svg {
 @media (max-width: 700px) {
   .destination_field {
     grid-column: 1 / -1;
-    border-bottom: 1px solid #e0e2d7;
+    border-bottom: 1px solid var(--border-color);
     border-right: none;
     padding-bottom: 16px;
   }
   .passengers_field {
     padding-left: 12px;
-    border-left: 1px solid #e0e2d7;
+    border-left: 1px solid var(--border-color);
   }
 }
 
@@ -1689,8 +1691,8 @@ svg {
   }
   .hero_blur {
     background: 
-      linear-gradient(90deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.5) 34%, rgba(0, 0, 0, 0.2) 68%, rgba(0, 0, 0, 0.15)), 
-      linear-gradient(0deg, rgba(0, 0, 0, .8), rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.2));
+      linear-gradient(90deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.3) 54%, rgba(0, 0, 0, 0.15) 68%, rgba(0, 0, 0, 0)), 
+      linear-gradient(0deg, rgba(0, 0, 0, .85), rgba(0, 0, 0, 0.15) 35%, rgba(0, 0, 0, 0));
   }
   .hero_stamp {
     right: max(10%, calc((100vw - 1360px) / 2));
@@ -1764,7 +1766,7 @@ svg {
   .booking_field {
     gap: 9px;
     padding-right: 13px;
-    border-right: 1px solid #dadccf;
+    border-right: 1px solid var(--border-color);
   }
   .booking_reassurance {
     gap: 25px;
