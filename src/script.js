@@ -41,9 +41,11 @@ window.addEventListener("scroll", blurHeader);
 const scrollUp = () => {
   const scrollUp = document.getElementById("scroll-up");
   // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
-  window.scrollY >= 350
-    ? scrollUp.classList.add("show-scroll")
-    : scrollUp.classList.remove("show-scroll");
+  if(scrollUp) {
+    window.scrollY >= 350
+      ? scrollUp.classList.add("show-scroll")
+      : scrollUp.classList.remove("show-scroll");
+  }
 };
 window.addEventListener("scroll", scrollUp);
 
@@ -62,9 +64,9 @@ const scrollActive = () => {
       );
 
     if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
-      sectionsClass.classList.add("active-link");
+      // sectionsClass.classList.add("active-link");
     } else {
-      sectionsClass.classList.remove("active-link");
+      // sectionsClass.classList.remove("active-link");
     }
   });
 };
@@ -263,24 +265,25 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 /*=============== GSAP HERO ===============*/
 // GSAP animations (tl = timeline)
-const tl = gsap.timeline();
+// const tl = gsap.timeline();
 
-tl.from(".hero_image", { x: 1000, duration: 2 }, 0)
-  .from(".hero_swiper-text", { y: 100, opacity: 0, delay: 0.5 }, 2)
-  .from(".hero_swiper-title", { y: 100, opacity: 0, delay: 0.1 }, 2.1);
+// tl.from(".slide_image-container", { x: 1000, duration: 2 }, 0)
+//   .from(".master_swiper-text", { y: 100, opacity: 0, delay: 0.5 }, 2)
+//   .from(".master_swiper-title", { y: 100, opacity: 0, delay: 0.1 }, 2.1);
 
 /*=============== SWIPERJS HERO ===============*/
-const swiperHero = new Swiper('.hero_swiper', {
+const swiperHero = new Swiper('.master_swiper', {
   effect: 'fade',
   speed: 1200,
   loop: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 3000,
+  //   disableOnInteraction: false,
+  // },
   fadeEffect: { 
     crossFade: false 
   },
+  grabCursor: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -321,7 +324,7 @@ const sr = ScrollReveal({
 });
 
 // sr.reveal(`.testimonial_container, .footer_container`);
-// sr.reveal(`.hero_swiper-title`, { delay: 600 })
+// sr.reveal(`.master_swiper-title`, { delay: 600 })
 // sr.reveal(`.hero_description`, { delay: 900 })
 // sr.reveal(`.hero_data .button`, { delay: 1200 })
 // sr.reveal(`.destination_card, .services_card`, { interval: 100 });

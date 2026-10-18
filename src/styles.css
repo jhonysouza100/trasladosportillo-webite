@@ -424,6 +424,7 @@ svg {
   letter-spacing: -2px;
   font-weight: 700;
   font-family: var(--display-font);
+  /* text-shadow: 2px 1px 14px rgb(0 0 0 / 90%); */
 }
 .hero_title-small {
   font-size: 32px;
@@ -531,80 +532,80 @@ svg {
   font-weight: 400;
 }
 
-.hero_swiper,
-.hero_article {
-  height: 100vh;
+/* MASTER SWIPER */
+.master {
+  background: var(--primary-color);
+  color: var(--secondary-color);
 }
-.hero_article {
+.master h2 {
+  color: var(--secondary-color)
+}
+.master .container {
+  place-items: center;
+}
+.master_content {
+  width: 100%;
+  height: 100%;
+}
+.master_swiper {
+  height: 350px;
+}
+.slide_image-container {
+  will-change: transform;
   position: relative;
-  padding-top: 8rem;
+  height: 100%;
+  width: 100%;
 }
-.hero_swiper-text {
-  color: #fff;
-  width: max-content;
-  margin: auto;
-}
-.hero_swiper-subtitle {
-  font: var(--hero-big-font-size) var(--display-font);
-}
-.hero_swiper-title {
-  font-size: var(--hero-biggest-font-size);
-  font-weight: 700;
-}
-.hero_image {
-  position: relative;
-}
-.hero_img {
+.slide_img-car {
   position: absolute;
+  bottom: 0;
   width: 400px;
-  top: -1.5rem;
-  left: 0;
-  transform: translateX(10rem);
+  transform: translateX(5rem);
+  transition: all 0.3s;
   opacity: 0;
-  transition: 0.8s;
 }
-.hero_img-driver {
-  width: 200px;
-  margin: auto;
-  transform: translate(8rem, -12rem);
-  opacity: 0;
-  transition: 0.8s;
-  mask-image: linear-gradient(#000 60%, transparent);
-}
-.swiper-slide-active .hero_img {
+.swiper-slide-active .slide_img-car {
   transform: translateX(0);
   opacity: 1;
 }
-.swiper-slide-active .hero_img-driver {
+.slide_img-driver {
+  position: absolute;
+  left: 200px;
+  height: 300;
+  margin: auto;
+  opacity: 0;
+  transition: all 0.3s;
+  mask-image: linear-gradient(#000 60%, transparent);
+}
+.swiper-slide-active .slide_img-driver {
   opacity: 1;
 }
-.hero_interaction {
-  position: absolute;
-  inset: 0;
+.master_interactions {
+  position: relative;
   z-index: 2;
-  pointer-events: none;
+  margin-inline: auto;
+  width: 180px;
+  height: 2.25rem;
 }
-.swiper-pagination {
+.master_interactions .swiper-pagination {
+  position: absolute;
+  top: 0;
+  left: 0;
   pointer-events: auto;
+  display: inline-flex;
+  width: max-content;
 }
 .swiper-pagination-bullet {
   width: 2rem;
   height: 2rem;
   background: none;
-  color: #fff;
+  color: var(--secondary-color);
+  display: grid;
+  place-content: center;
   opacity: 1;
 }
 .swiper-pagination-bullet-active {
-  border: 2px solid;
-}
-.hero_actions {
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 4;
-  display: grid;
-  gap: 1rem;
-  justify-items: center;
+  border: 2px solid var(--secondary-color);
 }
 
 /*=============== BOOKING AREA ===============*/
@@ -1585,16 +1586,6 @@ svg {
   /* background-color: hsl(220, 6%, 50%); */
 }
 
-@media screen and (max-width: 320px) {
-  .services_container {
-    grid-template-columns: 280px;
-    justify-content: center;
-  }
-  .services_card {
-    padding: 2rem 1.5rem;
-  }
-}
-
 /*=============== BREAKPOINTS ===============*/
 /* For smaller (xs) devices */
 @media screen and (max-width: 320px) {
@@ -1621,15 +1612,7 @@ svg {
 
 /* For medium (md) devices */
 @media screen and (min-width: 576px) {
-  .services_container {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-  .testimonial_swiper {
-    max-width: 400px;
-  }
-  .testimonial_img {
-    width: 400px;
-  }
+  
 }
 
 /* For large devices (lg) */
@@ -1691,8 +1674,8 @@ svg {
   }
   .hero_blur {
     background: 
-      linear-gradient(90deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.3) 54%, rgba(0, 0, 0, 0.15) 68%, rgba(0, 0, 0, 0)), 
-      linear-gradient(0deg, rgba(0, 0, 0, .85), rgba(0, 0, 0, 0.15) 35%, rgba(0, 0, 0, 0));
+      linear-gradient(45deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.05) 45%, rgba(0, 0, 0, 0)), 
+      linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.05) 45%, rgba(0, 0, 0, 0));
   }
   .hero_stamp {
     right: max(10%, calc((100vw - 1360px) / 2));
@@ -1923,6 +1906,19 @@ svg {
     bottom: 25px;
     right: 28px;
   }
+  
+  .master_swiper {
+    height: 450px;
+  }
+  .slide_img-car {
+    width: 500px;
+    transform: translateX(10rem);
+  }
+  .slide_img-driver {
+    left: 250px;
+    height: 400px;
+    bottom: 50px;
+  }
 }
 
 /* For extra large devices (xl) */
@@ -2002,6 +1998,8 @@ svg {
   .destination_title {
     font-size: var(--h2-font-size);
   }
+
+
   .testimonial_container {
     grid-template-columns: 600px 400px;
   }
