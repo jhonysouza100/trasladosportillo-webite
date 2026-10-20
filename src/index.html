@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0A2342" />
+    <meta name="theme-color" content="#003b95" />
     <link rel="canonical" href="https://trasladosportillo.com/" />
 
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&amp;family=Manrope:wght@400;500;600;650;700;750;800&amp;display=swap" rel="stylesheet" />
@@ -70,17 +70,28 @@
             <li>
               <a href="#traslados" class="nav_link active-link">Nuestros traslados</a>
             </li>
-            <li><a href="#nosotros" class="nav_link">¿Por qué Portillo?</a></li>
-            <li><a href="#flota" class="nav_link">La flota</a></li>
+            <li>
+              <a href="#nosotros" class="nav_link">¿Por qué Portillo?</a>
+            </li>
+            <li>
+              <a href="#flota" class="nav_link">La flota</a>
+            </li>
           </ul>
           <span class="nav_close" id="nav-close" aria-label="Cerrar menú">
             <i class="ri-close-line"></i>
           </span>
         </div>
-        <a href="https://wa.me/543757515793" class="button nav_button" target="_blank" rel="noopener noreferrer">
-          Hablemos de tu viaje
-          <i class="ri-arrow-right-up-line"></i>
-        </a>
+        <details class="language-menu">
+          <summary class="button nav_button">
+            <i class="ri-global-line" aria-hidden="true"></i>
+            Español
+            <i class="ri-arrow-down-s-line language-menu_icon" aria-hidden="true"></i>
+          </summary>
+          <ul class="language-menu_options" aria-label="Seleccionar idioma">
+            <li><a href="/pt" lang="pt">Português</a></li>
+            <li><a href="/en" lang="en">English</a></li>
+          </ul>
+        </details>
         <div class="nav_buttons">
           <span
             class="nav_toggle"
@@ -106,34 +117,74 @@
         <div class="hero_content container">
           <span class="hero_antetitle">
             <span class="hero_status-dot"></span>
-            PUERTO IGUAZÚ, ARGENTINA
+            TRASLADOS EN PUERTO IGUAZÚ
           </span>
-          <h1 class="hero_title">
-            <span class="hero_title-small">De las</span>
-            <br>CATARATAS<br>
-            <span>
-              <span class="hero_title-small">al</span>
-              <span class="bg_clip-text">
-                AEROPUERTO
-              </span>
-            </span>
-          </h1>
           <div class="hero_info">
-            <p class="hero_info-description">
-              Punto a punto sin espera, puntualidad garantizada
-            </p>
-            <p class="hero_info-subdescription">
-              Traslados privados. Vehículos cómodos y climatizados.
-            </p>
-            <div class="hero_info-actions">
-              <button class="button hero_info-button">
-                Planeá tu traslado
-                <i class="ri-arrow-right-up-line"></i>
-              </button>
-              <a href="#traslados" class="button hero_info-explore">
-                Explorá los destinos
-                <i class="ri-arrow-down-line"></i>
-              </a>
+            <h1 class="hero_title">
+              <span class="hero_title-small">De las</span>
+              <br>CATARATAS<br>
+              <span>
+                <span class="hero_title-small">al</span>
+                <span class="hero_title-special">
+                  AEROPUERTO
+                </span>
+              </span>
+            </h1>
+            <div class="swiper hero_swiper">
+              <div class="swiper-wrapper">
+                <article class="swiper-slide hero_slide">
+                  <figure class="slide_image-container">
+                    <img
+                      src="/public/images/driver-1.webp"
+                      class="slide_img-driver"
+                      alt="Conductor"
+                    /><img
+                      src="/public/images/taxi Chevrolet Spin 2017.webp"
+                      class="slide_img-car"
+                      alt="Vehículo"
+                    />
+                  </figure>
+                </article>
+                <article class="swiper-slide hero_slide">
+                  <figure class="slide_image-container">
+                    <img
+                      src="/public/images/driver-4.webp"
+                      class="slide_img-driver"
+                      alt="Conductor"
+                    /><img
+                      src="/public/images/taxi Citroën C3 Aircross 2021.webp"
+                      class="slide_img-car"
+                      alt="Vehículo"
+                    />
+                  </figure>
+                </article>
+                <article class="swiper-slide hero_slide">
+                    <figure class="slide_image-container">
+                      <img
+                        src="/public/images/driver-5.webp"
+                        class="slide_img-driver"
+                        alt="Conductor"
+                      /><img
+                        src="/public/images/taxi Fiat Cronos 2022.webp"
+                        class="slide_img-car"
+                        alt="Vehículo"
+                      />
+                    </figure>
+                </article>
+                <article class="swiper-slide hero_slide">
+                    <figure class="slide_image-container">
+                      <img
+                        src="/public/images/driver-2.webp"
+                        class="slide_img-driver"
+                        alt="Conductor"
+                      /><img
+                        src="/public/images/taxi Citroën C4 Lounge 2014.webp"
+                        class="slide_img-car"
+                        alt="Vehículo"
+                      />
+                    </figure>
+                </article>
+              </div>
             </div>
           </div>
         </div>
@@ -141,11 +192,13 @@
         <div class="hero_bottom container">
           <div class="hero_caption">
             <i class="ri-map-pin-line"></i>
-            <span
-              >Un destino extraordinario.<br /><strong
-                >Una forma más simple de llegar.</strong
-              ></span
-            >
+            <span>
+              Traslados privados
+              <br />
+              <strong>
+                Vehículos cómodos y climatizados.
+              </strong>
+            </span>
           </div>
           <div class="hero_coordinates">
             <i class="ri-add-large-line"></i>
@@ -296,76 +349,6 @@
         </div>
       </div>
 
-      <section class="master section">
-        <div class="container grid">
-          <!-- GRID 1 -->
-          <div class="about_heading">
-            <div>
-              <p class="section_eyebrow">
-                <span class="tiny_line"></span>
-                TRASLADOS PORTILLO
-              </p>
-              <h2 class="section_title">
-                Conductores y vehículos
-              </h2>
-            </div>
-            <p class="section_description">
-              Conocé a quienes te llevan por Puerto Iguazú y la región.
-            </p>
-          </div>
-
-          <!-- GRID 2 -->
-           <div class="master_content">
-            <div class="master_interactions">
-               <div class="swiper-pagination"></div>
-             </div> 
-             <div class="swiper master_swiper">
-               <div class="swiper-wrapper">
-                 <article class="swiper-slide">
-                   <figure class="slide_image-container">
-                     <img
-                       src="/public/images/driver-1.webp"
-                       class="slide_img-driver"
-                       alt="Conductor"
-                     /><img
-                       src="/public/images/car-1.webp"
-                       class="slide_img-car"
-                       alt="Vehículo"
-                     />
-                   </figure>
-                 </article>
-                 <article class="swiper-slide hero_slide">
-                   <figure class="slide_image-container">
-                     <img
-                       src="/public/images/driver-2.webp"
-                       class="slide_img-driver"
-                       alt="Conductor"
-                     /><img
-                       src="/public/images/car-2.webp"
-                       class="slide_img-car"
-                       alt="Vehículo"
-                     />
-                   </figure>
-                 </article>
-                 <article class="swiper-slide hero_slide">
-                     <figure class="slide_image-container">
-                       <img
-                         src="/public/images/driver-3.webp"
-                         class="slide_img-driver"
-                         alt="Conductor"
-                       /><img
-                         src="/public/images/car-3.webp"
-                         class="slide_img-car"
-                         alt="Vehículo"
-                       />
-                     </figure>
-                 </article>
-               </div>
-             </div>
-           </div>
-        </div>
-      </section>
-
       <section class="section container destinations" id="traslados">
         <div class="section_heading">
           <div>
@@ -376,9 +359,7 @@
             <h2 class="section_title destinations_title">
               Tu traslado
               <br>
-              <span class="bg_clip-text">
-                Nuestra prioridad
-              </span>
+              Nuestra prioridad
             </h2>
           </div>
           <p class="section_description">
@@ -387,318 +368,8 @@
             tu viaje sea cómodo, seguro y sin preocupaciones.
           </p>
         </div>
-        <div class="destinations_content grid">
-          <div class="destination_card">
-            <button class="destination_image">
-              <img
-                src="/public/images/cataratas-iguazu.webp"
-                alt="Cataratas del Iguazú y la selva misionera"
-                loading="lazy"
-              />
-              <span class="destination_tag">EL IMPERDIBLE</span>
-              <span class="destination_number">01</span>
-              <span class="destination_arrow">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="21"
-                  height="21"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-arrow-up-right"
-                  aria-hidden="true"
-                  x-file-name="Destinations"
-                  x-line-number="14"
-                  x-column="462"
-                  x-component="ArrowUpRight"
-                  x-id="Destinations_14_462"
-                  x-dynamic="true"
-                  x-source-type="external"
-                  x-source-var="services"
-                  x-source-editable="false"
-                  x-array-var="services"
-                  x-array-item-param="service"
-                >
-                  <path d="M7 7h10v10"></path>
-                  <path d="M7 17 17 7"></path>
-                </svg>
-              </span>
-            </button>
-            <div class="destination_body">
-              <div class="destination_card-eyebrow">
-                <i class="ri-tree-line"></i>
-                NATURALEZA EN ESTADO PURO
-              </div>
-              <h3 class="destination_card-title">Cataratas del Iguazú</h3>
-              <p class="destination_card-description">
-                De tu alojamiento a una de las grandes maravillas naturales del
-                mundo. Vos disfrutá el paisaje; nosotros, el camino.
-              </p>
-              <div class="destination_card-route">
-                <i class="ri-map-pin-line"></i>
-                Tu alojamiento ↔ Parque Nacional
-              </div>
-              <div class="destination_card-footer">
-                <span class="destination_card-price">Tarifa a consultar</span>
-                <span class="destination_card-button">
-                  Ver traslado
-                  <i class="ri-arrow-right-line"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="destination_card">
-            <button class="destination_image">
-              <img
-                src="/public/images/hero-bg.jpg"
-                alt="Avión llegando a Iguazú sobre las Cataratas"
-                loading="lazy"
-              />
-              <span class="destination_tag">LLEGÁ Y DISFRUTÁ</span>
-              <span class="destination_number">02</span>
-              <span class="destination_arrow">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="21"
-                  height="21"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-arrow-up-right"
-                  aria-hidden="true"
-                  x-file-name="Destinations"
-                  x-line-number="14"
-                  x-column="462"
-                  x-component="ArrowUpRight"
-                  x-id="Destinations_14_462"
-                  x-dynamic="true"
-                  x-source-type="external"
-                  x-source-var="services"
-                  x-source-editable="false"
-                  x-array-var="services"
-                  x-array-item-param="service"
-                >
-                  <path d="M7 7h10v10"></path>
-                  <path d="M7 17 17 7"></path>
-                </svg>
-              </span>
-            </button>
-            <div class="destination_body">
-              <div class="destination_card-eyebrow">
-                <i class="ri-plane-line"></i>
-                AEROPUERTO · IGR
-              </div>
-              <h3 class="destination_card-title">Del avión a tu destino</h3>
-              <p class="destination_card-description">
-                Tu viaje empieza apenas aterrizás. Coordiná el traslado entre el
-                aeropuerto de Puerto Iguazú y tu alojamiento.
-              </p>
-              <div class="destination_card-route">
-                <i class="ri-map-pin-line"></i>
-                Aeropuerto IGR ↔ Tu alojamiento
-              </div>
-              <div class="destination_card-footer">
-                <span class="destination_card-price">Tarifa a consultar</span>
-                <span class="destination_card-button">
-                  Ver traslado
-                  <i class="ri-arrow-right-line"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="destination_card">
-            <button class="destination_image">
-              <img
-                src="/public/images/image-hito-3-fronteras.jpg"
-                alt="Hito de las Tres Fronteras en Puerto Iguazú"
-                loading="lazy"
-              />
-              <span class="destination_tag">VOS ELEGÍS EL PLAN</span>
-              <span class="destination_number">03</span>
-              <span class="destination_arrow">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="21"
-                  height="21"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-arrow-up-right"
-                  aria-hidden="true"
-                  x-file-name="Destinations"
-                  x-line-number="14"
-                  x-column="462"
-                  x-component="ArrowUpRight"
-                  x-id="Destinations_14_462"
-                  x-dynamic="true"
-                  x-source-type="external"
-                  x-source-var="services"
-                  x-source-editable="false"
-                  x-array-var="services"
-                  x-array-item-param="service"
-                >
-                  <path d="M7 7h10v10"></path>
-                  <path d="M7 17 17 7"></path>
-                </svg>
-              </span>
-            </button>
-            <div class="destination_body">
-              <div class="destination_card-eyebrow">
-                <i class="ri-compass-3-line"></i>
-                CIUDAD & ALREDEDORES
-              </div>
-              <h3 class="destination_card-title">Puntos Turísticos</h3>
-              <p class="destination_card-description">
-                El Hito Tres Fronteras, una cena especial o ese rincón que
-                querés conocer. Armemos un recorrido a tu medida.
-              </p>
-              <div class="destination_card-route">
-                <i class="ri-map-pin-line"></i>
-                Tu punto de partida ↔ Tu próximo plan
-              </div>
-              <div class="destination_card-footer">
-                <span class="destination_card-price">Tarifa a consultar</span>
-                <span class="destination_card-button">
-                  Ver traslado
-                  <i class="ri-arrow-right-line"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div class="destination_card">
-            <button class="destination_image">
-              <img
-                src="/public/images/image-traslado-hoteles.jpg"
-                alt="Conducción por una ruta de la región"
-                loading="lazy"
-              />
-              <span class="destination_tag">VOS ELEGÍS EL PLAN</span>
-              <span class="destination_number">04</span>
-              <span class="destination_arrow">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="21"
-                  height="21"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-arrow-up-right"
-                  aria-hidden="true"
-                  x-file-name="Destinations"
-                  x-line-number="14"
-                  x-column="462"
-                  x-component="ArrowUpRight"
-                  x-id="Destinations_14_462"
-                  x-dynamic="true"
-                  x-source-type="external"
-                  x-source-var="services"
-                  x-source-editable="false"
-                  x-array-var="services"
-                  x-array-item-param="service"
-                >
-                  <path d="M7 7h10v10"></path>
-                  <path d="M7 17 17 7"></path>
-                </svg>
-              </span>
-            </button>
-            <div class="destination_body">
-              <div class="destination_card-eyebrow">
-                <i class="ri-hotel-line"></i>
-                HOTELES
-              </div>
-              <h3 class="destination_card-title">Alojamientos</h3>
-              <p class="destination_card-description">
-                Traslados puntuales desde aeropuertos o terminales hasta tu
-                destino, sin demoras.
-              </p>
-              <div class="destination_card-route">
-                <i class="ri-map-pin-line"></i>
-                Tu punto de partida ↔ Tu alojamiento
-              </div>
-              <div class="destination_card-footer">
-                <span class="destination_card-price">Tarifa a consultar</span>
-                <span class="destination_card-button">
-                  Ver traslado
-                  <i class="ri-arrow-right-line"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="destination_card">
-            <button class="destination_image">
-              <img
-                src="/public/images/image-compras-aparaguay.jpg"
-                alt="Duty Free Shop de Puerto Iguazú"
-                loading="lazy"
-              />
-              <span class="destination_tag">VAMOS DE COMPRAS</span>
-              <span class="destination_number">05</span>
-              <span class="destination_arrow">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="21"
-                  height="21"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-arrow-up-right"
-                  aria-hidden="true"
-                  x-file-name="Destinations"
-                  x-line-number="14"
-                  x-column="462"
-                  x-component="ArrowUpRight"
-                  x-id="Destinations_14_462"
-                  x-dynamic="true"
-                  x-source-type="external"
-                  x-source-var="services"
-                  x-source-editable="false"
-                  x-array-var="services"
-                  x-array-item-param="service"
-                >
-                  <path d="M7 7h10v10"></path>
-                  <path d="M7 17 17 7"></path>
-                </svg>
-              </span>
-            </button>
-            <div class="destination_body">
-              <div class="destination_card-eyebrow">
-                <i class="ri-shopping-bag-3-line"></i>
-                PARAGUAY
-              </div>
-              <h3 class="destination_card-title">Tour de Compras</h3>
-              <p class="destination_card-description">
-                Te llevamos a Ciudad del Este o al Duty Free con traslados
-                rápidos y sin contratiempos.
-              </p>
-              <div class="destination_card-route">
-                <i class="ri-map-pin-line"></i>
-                Tu punto de partida ↔ Shoping en Cde
-              </div>
-              <div class="destination_card-footer">
-                <span class="destination_card-price">Tarifa a consultar</span>
-                <span class="destination_card-button">
-                  Ver traslado
-                  <i class="ri-arrow-right-line"></i>
-                </span>
-              </div>
-            </div>
-          </div>
+        <div class="destinations_container">
+          <!-- DINAMIC WITH JS -->
         </div>
         <div class="destination_footer">
           <span>
@@ -790,7 +461,7 @@
                 cx="340"
                 cy="45"
                 r="7"
-                fill="var(--gold-color)"
+                fill="#d7ed76"
                 x-file-name="Story"
                 x-line-number="7"
                 x-column="541"
@@ -893,79 +564,129 @@
       </section>
 
       <section class="fleet" id="flota">
-        <div class="section container">
-          <div class="section_heading">
+        <div class="section">
+          <div class="section_heading container">
             <div>
               <p class="section_eyebrow">
                 <span class="tiny_line"></span>
-                EL ESPACIO PARA TU PRÓXIMA HISTORIA
+                TRASLADOS PORTILLO
               </p>
               <h2 class="section_title">
-                Tu compañía
-                <br>
-                <span class="bg_clip-text">
-                  Nuestro camino
-                </span>
+                Conductores y vehículos
               </h2>
             </div>
             <p class="section_description">
-              Una flota propia de 4 vehículos.
-              <br />
-              Encontramos la opción para tu grupo.
+              Conocé a quienes te llevan por Puerto Iguazú y la región.
             </p>
           </div>
-          <div class="fleet_content grid">
-            <div class="fleet_card">
-              <div class="fleet_top">
-                <span>3 VEHÍCULOS</span>
-                <div class="fleet_top-tag">
-                  <i class="ri-user-3-line"></i>
-                  Hasta 4 pasajeros
+          <div class="fleet_content">
+            <div class="fleet_interactions">
+               <div class="swiper-pagination fleet-pagination"></div>
+             </div> 
+            <div class="swiper fleet_swiper">
+              <div class="swiper-wrapper">
+                <div class="fleet_card swiper-slide">
+                  <div class="fleet_top">
+                    
+                    <div class="fleet_top-tag">
+                      <i class="ri-user-3-line"></i>
+                      Hasta 6 pasajeros
+                    </div>
+                  </div>
+                  <img
+                    src="/public/images/taxi Chevrolet Spin 2017.webp"
+                    alt="Sedán para traslados de hasta 4 pasajeros, imagen de referencia"
+                  />
+                  <div class="fleet_car-name">Chevrolet Spin 2017</div>
+                  <div class="fleet_card-bottom">
+                    <div>
+                      <h3>Traslados para familias y grupos.</h3>
+                      <p>
+                        Una opción práctica para quienes necesitan trasladarse juntos, con comodidad y sin dividir el grupo en varios vehículos. Adecuada para viajes al aeropuerto, hoteles, excursiones y traslados turísticos en Puerto Iguazú.
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <img
-                src="/public/images/car-1.webp"
-                alt="Sedán para traslados de hasta 4 pasajeros, imagen de referencia"
-              />
-              <div class="fleet_card-bottom">
-                <div>
-                  <h3>Escapadas bien acompañadas</h3>
-                  <p>
-                    Para viajar en pareja, en familia o con tu grupo de amigos.
-                  </p>
+    
+                <div class="fleet_card swiper-slide">
+                  <div class="fleet_top">
+                    
+                    <div class="fleet_top-tag">
+                      <i class="ri-user-3-line"></i>
+                      Hasta 4 pasajeros
+                    </div>
+                  </div>
+                  <img
+                    src="/public/images/taxi Fiat Cronos 2022.webp"
+                    alt="Van para traslados de hasta 6 pasajeros, imagen de referencia"
+                  />
+                  <div class="fleet_car-name">Fiat Cronos 2022</div>
+                  <div class="fleet_card-bottom">
+                    <div>
+                      <h3>
+                        Traslados privados y cómodos.
+                      </h3>
+                      <p>
+                        Su interior amplio y su baúl independiente permiten disfrutar de un traslado cómodo y organizado. Una alternativa para parejas, familias pequeñas y viajeros que buscan un servicio privado entre el aeropuerto, los hoteles y los principales atractivos turísticos.
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <span>
-                  <i class="ri-arrow-right-up-line"></i>
-                </span>
-              </div>
-            </div>
+    
+                <div class="fleet_card swiper-slide">
+                  <div class="fleet_top">
+                    
+                    <div class="fleet_top-tag">
+                      <i class="ri-user-3-line"></i>
+                      Hasta 4 pasajeros
+                    </div>
+                  </div>
+                  <img
+                    src="/public/images/taxi Citroën C3 Aircross 2021.webp"
+                    alt="Van para traslados de hasta 6 pasajeros, imagen de referencia"
+                  />
+                  <div class="fleet_car-name">Citroën C3 Aircross 2021</div class="fleet_car-name">
+                  <div class="fleet_card-bottom">
+                    <div>
+                      <h3>
+                        Traslados turísticos confortables.
+                      </h3>
+                      <p>
+                        Una alternativa para quienes priorizan una posición de asiento más elevada, facilidad para subir y bajar y una sensación de amplitud durante el trayecto. Ideal para traslados privados en Puerto Iguazú, recorridos hacia hoteles y viajes turísticos.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="fleet_card swiper-slide">
+                  <div class="fleet_top">
+                    
+                    <div class="fleet_top-tag">
+                      <i class="ri-user-3-line"></i>
+                      Hasta 4 pasajeros
+                    </div>
+                  </div>
+                  <img
+                    src="/public/images/taxi Citroën C4 Lounge 2014.webp"
+                    alt="Van para traslados de hasta 6 pasajeros, imagen de referencia"
+                  />
+                  <div class="fleet_car-name">Citroën C4 Lounge 2014</div>
+                  <div class="fleet_card-bottom">
+                    <div>
+                      <h3>
+                        Traslados ejecutivos privados.
+                      </h3>
+                      <p>
+                        Su interior confortable y su estilo elegante lo convierten en una buena opción para viajes de negocios, traslados privados, parejas y pasajeros que buscan una experiencia más exclusiva. Ideal para conectar el aeropuerto, hoteles y destinos turísticos con un servicio personalizado.
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
-            <div class="fleet_card">
-              <div class="fleet_top">
-                <span>1 VEHÍCULO</span>
-                <div class="fleet_top-tag">
-                  <i class="ri-user-3-line"></i>
-                  Hasta 6 pasajeros
-                </div>
-              </div>
-              <img
-                src="/public/images/car-4.webp"
-                alt="Van para traslados de hasta 6 pasajeros, imagen de referencia"
-              />
-              <div class="fleet_card-bottom">
-                <div>
-                  <h3>Más lugar, más historias</h3>
-                  <p>
-                    Para compartir el viaje con más de los tuyos, todos juntos.
-                  </p>
-                </div>
-                <span>
-                  <i class="ri-arrow-right-up-line"></i>
-                </span>
               </div>
             </div>
           </div>
-          <div class="fleet_note">
+          <div class="fleet_footer container">
             <i class="ri-compass-3-line"></i>
             Contanos cuántos viajan y qué equipaje llevan. Coordinamos el
             vehículo según capacidad y disponibilidad.
@@ -1168,7 +889,9 @@
             <p class="footer_tagline">
               Traslados privados
               <br>
-              Vehículos cómodos y climatizados
+              <strong>
+                Vehículos cómodos y climatizados.
+              </strong>
             </p>
           </div>
           <div class="footer_links">
@@ -1220,6 +943,9 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
 
     <!--=============== MAIN JS ===============-->
+    <script src="destinations.js"></script>
+    
     <script src="script.js"></script>
+
   </body>
 </html>

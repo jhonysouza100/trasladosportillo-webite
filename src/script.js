@@ -59,14 +59,16 @@ const scrollActive = () => {
     const sectionHeight = current.offsetHeight,
       sectionTop = current.offsetTop - 58,
       sectionId = current.getAttribute("id"),
-      sectionsClass = document.querySelector(
-        ".nav_menu a[href*=" + sectionId + "]",
-      );
+         sectionsClass = document.querySelector(
+           `.nav_menu a[href="#${sectionId}"]`,
+         );
+
+        if (!sectionsClass) return;
 
     if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
-      // sectionsClass.classList.add("active-link");
+      sectionsClass.classList.add("active-link");
     } else {
-      // sectionsClass.classList.remove("active-link");
+      sectionsClass.classList.remove("active-link");
     }
   });
 };
@@ -210,12 +212,14 @@ if (bookingForm) {
     const formData = new FormData(bookingForm);
     const [year, month, day] = formData.get("date").split("-");
     const message = [
-      "Hola, quisiera consultar por un traslado:",
-      `Origen: ${formData.get("from")}`,
-      `Destino: ${formData.get("to")}`,
-      `Fecha: ${day}/${month}/${year.slice(-2)}`,
-      `Hora: ${formData.get("time")}`,
-      `Pasajeros: ${formData.get("passengers")}`,
+      "Hola! Quisiera consultar por un traslado:",
+      `📍 Origen: ${formData.get("from")}`,
+      `📍 Destino: ${formData.get("to")}`,
+      `📅 Fecha: ${day}/${month}/${year.slice(-2)}`,
+      `🕒 Hora: ${formData.get("time")}`,
+      `👥 Pasajeros: ${formData.get("passengers")}`,
+      "",
+      "🌐 https://trasladosportillo.com",
     ].join("\n");
 
     window.open(
@@ -226,72 +230,148 @@ if (bookingForm) {
   });
 }
 
-// =============== SHOW DROP LIST ===============
-const drop = document.querySelectorAll('.drop-btn')
+// =============== FAQ ACCORDION ===============
+const faqList = document.querySelector(".faq_list");
 
-drop.forEach(item => {
-  const dropList = item.querySelector('.drop_list')
+if (faqList) {
+  const faqItems = faqList.querySelectorAll(".drop-btn");
 
-  item.addEventListener('click', () => {
-    // 2. Close any other drop that are open
-    const openItem = document.querySelector('.show-drop') // Search if there are any open drop
+  faqItems.forEach((item) => {
+    const answer = item.querySelector(".drop_list");
+    if (!answer) return;
 
-    // Check if there is an open drop
-    if (openItem && openItem !== item) {
-      const openList = openItem.querySelector('.drop_list')
-      openList.removeAttribute('style')
-      openItem.classList.remove('show-drop')
-    }
+    item.addEventListener("click", () => {
+      const shouldOpen = !item.classList.contains("show-drop");
 
-    // 1. Show drop list (Ask if the drop is open or closed)
-    if (item.classList.contains('show-drop')) {
-      // If it's OPEN → IT CLOSES
-      dropList.removeAttribute('style')
-      item.classList.remove('show-drop')
-    } else {
-      // If it's CLOSED → IT OPENS
-      dropList.style.height = dropList.scrollHeight + 'px'
-      item.classList.add('show-drop')
-    }
-  })
-})
+      faqList.querySelectorAll(".drop-btn.show-drop").forEach((openItem) => {
+        openItem.classList.remove("show-drop");
+        openItem.querySelector(".drop_list")?.removeAttribute("style");
+      });
 
-// Inicializar el primer drop abierto
-document.addEventListener('DOMContentLoaded', async () => {
-  const openItem = document.querySelector('.show-drop')
-  const dropList = openItem.querySelector('.drop_list')
-  dropList.style.height = dropList.scrollHeight + 'px'
-})
+      if (shouldOpen) {
+        item.classList.add("show-drop");
+        answer.style.height = `${answer.scrollHeight}px`;
+      }
+    });
+  });
+
+  const initiallyOpenItem = faqList.querySelector(".drop-btn.show-drop");
+  const initiallyOpenAnswer = initiallyOpenItem?.querySelector(".drop_list");
+  if (initiallyOpenAnswer) {
+    initiallyOpenAnswer.style.height = `${initiallyOpenAnswer.scrollHeight}px`;
+  }
+}
 
 /*=============== GSAP HERO ===============*/
-// GSAP animations (tl = timeline)
-// const tl = gsap.timeline();
+const animateHeroSlide = (swiper) => {
+  const activeSlide = swiper.slides[swiper.activeIndex];
+  if (!activeSlide || typeof gsap === "undefined") return;
 
-// tl.from(".slide_image-container", { x: 1000, duration: 2 }, 0)
-//   .from(".master_swiper-text", { y: 100, opacity: 0, delay: 0.5 }, 2)
-//   .from(".master_swiper-title", { y: 100, opacity: 0, delay: 0.1 }, 2.1);
+  const car = activeSlide.querySelector(".slide_img-car");
+  const driver = activeSlide.querySelector(".slide_img-driver");
+  const elements = [car, driver].filter(Boolean);
 
-/*=============== SWIPERJS HERO ===============*/
-const swiperHero = new Swiper('.master_swiper', {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    gsap.set(elements, { clearProps: "transform,opacity" });
+    return;
+  }
+
+  gsap.killTweensOf(elements);
+  const timeline = gsap.timeline();
+
+  if (car) {
+    timeline.fromTo(
+      car,
+      { x: -110, autoAlpha: 0 },
+      {
+        x: "3rem",
+        autoAlpha: 1,
+        duration: 1,
+        ease: "power3.out",
+        clearProps: "opacity,visibility",
+      },
+      0,
+    );
+  }
+
+  if (driver) {
+    timeline.fromTo(
+      driver,
+      { x: 110, autoAlpha: 0 },
+      {
+        x: 0,
+        autoAlpha: 1,
+        duration: 0.85,
+        ease: "power3.out",
+        clearProps: "opacity,visibility",
+      },
+      0.12,
+    );
+  }
+};
+
+/*=============== SWIPERJS MASTER ===============*/
+const swiperMaster = new Swiper('.hero_swiper', {
   effect: 'fade',
   speed: 1200,
   loop: true,
-  // autoplay: {
-  //   delay: 3000,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
   fadeEffect: { 
     crossFade: false 
   },
-  grabCursor: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    renderBullet: function (index, className) {
-      return `<span class="${className}">${String(index + 1).padStart(2, "0")}</span>`;
-    },
+  grabCursor: false,
+  on: {
+    init: animateHeroSlide,
+    slideChangeTransitionStart: animateHeroSlide,
   },
 });
+
+/*=============== SWIPER FLEET ===============*/
+const fleetSwiperElement = document.querySelector(".fleet_swiper");
+const fleetSwiperMedia = window.matchMedia("(max-width: 1023px)");
+let fleetSwiper;
+
+const syncFleetSwiper = () => {
+  if (fleetSwiperMedia.matches) {
+    if (fleetSwiper || !fleetSwiperElement) return;
+
+    fleetSwiper = new Swiper(fleetSwiperElement, {
+      breakpointsBase: "window",
+      slidesPerView: 1,
+      spaceBetween: 16,
+      speed: 500,
+      loop: true,
+      grabCursor: true,
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: true,
+      },
+      pagination: {
+        el: document.querySelector(".fleet-pagination"),
+        clickable: true,
+        renderBullet: function (index, className) {
+          return `<span class="${className}">${String(index + 1).padStart(2, "0")}</span>`;
+        },
+      },
+    });
+  } else if (fleetSwiper) {
+    fleetSwiper.destroy(true, true);
+    fleetSwiper = undefined;
+  }
+};
+
+syncFleetSwiper();
+fleetSwiperMedia.addEventListener("change", syncFleetSwiper);
+window.addEventListener("resize", syncFleetSwiper, { passive: true });
 
 /*=============== SWIPERJS TESTIMONIALS ===============*/
 const swiperTestimonial = new Swiper('.testimonial_swiper', {
@@ -315,18 +395,42 @@ const swiperTestimonial = new Swiper('.testimonial_swiper', {
 });
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
-const sr = ScrollReveal({
-  origin: "top",
-  distance: "60px",
-  duration: 2000,
-  delay: 300,
-  reset: false,
-});
+if (typeof ScrollReveal === "function") {
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
+  const sr = ScrollReveal({
+    origin: "bottom",
+    distance: prefersReducedMotion ? "0px" : "22px",
+    duration: prefersReducedMotion ? 0 : 650,
+    delay: 0,
+    interval: 80,
+    opacity: prefersReducedMotion ? 1 : 0,
+    easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+    reset: false,
+    viewFactor: 0.12,
+    viewOffset: { top: 70, right: 0, bottom: 0, left: 0 },
+    cleanup: true,
+  });
 
-// sr.reveal(`.testimonial_container, .footer_container`);
-// sr.reveal(`.master_swiper-title`, { delay: 600 })
-// sr.reveal(`.hero_description`, { delay: 900 })
-// sr.reveal(`.hero_data .button`, { delay: 1200 })
-// sr.reveal(`.destination_card, .services_card`, { interval: 100 });
-// sr.reveal(`.join_data`, { origin: "left" });
-// sr.reveal(`.booking-widget-container`, { origin: "right" });
+  sr.reveal(".hero_antetitle, .hero_title", { interval: 100 });
+  sr.reveal(".hero_bottom > *", { origin: "bottom", interval: 100 });
+  sr.reveal(".booking_strip", { origin: "bottom" });
+  sr.reveal(".booking_reassurance span", { interval: 70 });
+
+  sr.reveal(".section_heading", { origin: "top" });
+  sr.reveal(".destination_footer", { origin: "bottom" });
+
+  sr.reveal(".about_image", { origin: "left" });
+  sr.reveal(".about_info > .about_heading", { origin: "right" });
+  sr.reveal(".about_benefits > div", { interval: 90 });
+
+  sr.reveal(".master .about_heading", { origin: "top" });
+  sr.reveal(".fleet_footer", { origin: "bottom" });
+  sr.reveal(".faq_heading", { origin: "top" });
+  sr.reveal(".faq_item", { interval: 80 });
+
+  sr.reveal(".contact_container", { origin: "left" });
+  sr.reveal(".contact_footer", { origin: "right" });
+  sr.reveal(".footer_main > *", { interval: 80 });
+}
