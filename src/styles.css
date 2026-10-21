@@ -412,11 +412,12 @@ svg {
   object-fit: cover;
   object-position: right top;
   width: 100%;
+  filter: brightness(0.6);
 }
 .hero_blur {
-  background: 
+  /* background: 
     linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), 
-    linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+    linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)); */
   inset: 0;
   position: absolute;
   z-index: -2;
@@ -480,6 +481,7 @@ svg {
   display: inline-flex; 
   background: var(--gradient-color);
   text-shadow: initial;
+  letter-spacing: -1px;
   
   /* Propiedades esenciales de recorte */
   -webkit-background-clip: text;
@@ -1905,9 +1907,9 @@ svg {
     margin-inline: 0;
   }
   .hero_blur {
-    background: 
+    /* background: 
       linear-gradient(45deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.05) 45%, rgba(0, 0, 0, 0)), 
-      linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.05) 45%, rgba(0, 0, 0, 0));
+      linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.05) 45%, rgba(0, 0, 0, 0)); */
   }
   .hero_info-button {
     height: 53px;
