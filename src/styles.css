@@ -187,13 +187,12 @@ svg {
   background: currentColor;
 }
 .bg_clip-text {
-  /* background: var(--gradient-color); */
+  background: var(--gradient-color);
   
   /* Propiedades esenciales de recorte */
-  /* -webkit-background-clip: text; */
-  /* background-clip: text; */
-  /* color: transparent; */
-  color: var(--special-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   text-transform: uppercase;
   display: inline-flex;
   
@@ -201,7 +200,7 @@ svg {
   font-weight: 900;
   letter-spacing: -1px; /* Letras juntas y compactas como en el diseño */ 
 
-  text-shadow: 1px 1px 2px rgb(0 0 0 / 90%);
+  filter: drop-shadow(1px 2px rgb(0 0 0 / 90%));
 }
 
 .main {
@@ -278,10 +277,14 @@ svg {
   background: transparent;
   border: 1px solid var(--white-color);
   color: var(--white-color);
+  font-weight: 500;
 }
 .nav_button:hover {
   background: #ffffff16;
   border-color: var(--secondary-color);
+}
+.nav_button i {
+  font-weight: 500;
 }
 .language-menu {
   position: relative;
@@ -314,6 +317,7 @@ svg {
 .language-menu_options a {
   border-radius: 5px;
   color: var(--primary-color);
+  font-weight: 600;
   display: block;
   font-size: 13px;
   padding: 9px 11px;
@@ -437,7 +441,7 @@ svg {
   text-shadow: 1px 1px 2px rgb(0 0 0 / 90%);
 }
 .hero_status-dot {
-  background: var(--special-color);
+  background: #d7ed76;
   box-shadow: 0 0 0 4px #F4F6F96e;
   height: 6px;
   width: 6px;
@@ -470,10 +474,18 @@ svg {
   font-size: 32px;
 }
 .hero_title-special {
-  color: var(--special-color);
+  /* color: var(--special-color); */
+  /* font-weight: 900; */
   text-transform: uppercase;
   display: inline-flex; 
-  font-weight: 900;
+  background: var(--gradient-color);
+  text-shadow: initial;
+  
+  /* Propiedades esenciales de recorte */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 90%));
 }
 .hero_info-description {
   font-size: 18px;
@@ -921,10 +933,12 @@ svg {
 .destination_country-panel {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 0.3s;
+  opacity: 0;
+  transition: grid-template-rows 0.2s, opacity 0.4s;
 }
 .destination_country.destination-open .destination_country-panel {
   grid-template-rows: 1fr;
+  opacity: 1;
 }
 .destination_country-panel > .destination_country-grid {
   min-height: 0;
@@ -1088,6 +1102,7 @@ svg {
 .destination_footer {
   margin-top: 30px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 24px;
@@ -1280,13 +1295,10 @@ svg {
 /* =============== FLEET =============== */
 .fleet {
   background: var(--background-color);
-  border-top: 1px solid var(--display-color);
-  border-bottom: 1px solid var(--display-color);
 }
 .fleet_content {
   min-width: 0;
   margin-top: 56px;
-  max-width: 1198px;
 }
 .fleet_swiper {
   width: 100%;
@@ -1313,6 +1325,16 @@ svg {
 }
 .swiper-pagination-bullet-active {
   border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+.fleet_navigatin-button {
+ color: var(--muted-color);
+ width: 32px;
+ height: 32px;
+ margin: initial !important;
+ top: calc(147px + 32px) !important;
+}
+.fleet_navigatin-button:hover {
   color: var(--primary-color);
 }
 .fleet_card {
@@ -1821,7 +1843,7 @@ svg {
   .section {
     padding-block: 85px 67px;
   }
-  .container, .fleet_content {
+  .container {
     margin-inline: 2rem;
   }
   .section_heading {
@@ -1951,6 +1973,9 @@ svg {
   }
   .destination_card-price {
     font-size: 10px;
+  }
+  .destination_footer {
+    flex-direction: row;
   }
 
   .marquee {
@@ -2189,8 +2214,12 @@ svg {
 @media screen and (min-width: 1024px) {
   .fleet_content {
     margin-top: 0;
+    max-width: 1198px;
+    margin-inline: auto;
   }
-  .fleet .fleet_interactions {
+  .fleet .fleet_interactions,
+  .fleet .swiper-button-next,
+  .fleet .swiper-button-prev {
     display: none;
   }
   .fleet_swiper {
