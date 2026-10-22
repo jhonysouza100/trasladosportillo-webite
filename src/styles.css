@@ -1963,11 +1963,6 @@ svg {
     line-height: 1.8;
     min-height: 66px;
   }
-  .destination_card-route {
-    font-size: 9px;
-    margin-top: 19px;
-    margin-bottom: 22px;
-  }
   .destination_card-price {
     font-size: 10px;
   }

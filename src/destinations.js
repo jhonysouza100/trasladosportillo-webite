@@ -1,5 +1,5 @@
 /* =============== DESTINATION CARDS =============== */
-const destinationContainer = document.querySelector(".destinations_container");
+const destinationContainer = document.getElementById("destinations-container");
 
 const createDestinationCard = (destination) => {
   const card = document.createElement("article");
@@ -9,7 +9,8 @@ const createDestinationCard = (destination) => {
   imageContainer.className = "destination_image";
 
   const image = document.createElement("img");
-  image.src = destination.image || "/public/images/destinations/placeholder.svg";
+  image.src =
+    destination.image || "/public/images/destinations/placeholder.svg";
   image.alt = destination.title;
   image.loading = "lazy";
   image.decoding = "async";
@@ -24,7 +25,9 @@ const createDestinationCard = (destination) => {
 
   const infoUrl = new URL(destination.infoUrl);
   if (!["http:", "https:"].includes(infoUrl.protocol)) {
-    throw new TypeError(`El enlace de información no es válido: ${destination.title}`);
+    throw new TypeError(
+      `El enlace de información no es válido: ${destination.title}`,
+    );
   }
 
   const arrow = document.createElement("a");
@@ -33,7 +36,10 @@ const createDestinationCard = (destination) => {
   arrow.target = "_blank";
   arrow.title = `Más información sobre ${destination.title}`;
   arrow.rel = "noopener noreferrer";
-  arrow.setAttribute("aria-label", `Más información sobre ${destination.title}`);
+  arrow.setAttribute(
+    "aria-label",
+    `Más información sobre ${destination.title}`,
+  );
   arrow.innerHTML = '<i class="ri-arrow-right-up-line"></i>';
 
   imageContainer.append(image, tag, number, arrow);
@@ -43,7 +49,8 @@ const createDestinationCard = (destination) => {
 
   const eyebrow = document.createElement("div");
   eyebrow.className = "destination_card-eyebrow";
-  const iconClass = destination.icon?.match(/\bri-[\w-]+\b/)?.[0] || "ri-map-line";
+  const iconClass =
+    destination.icon?.match(/\bri-[\w-]+\b/)?.[0] || "ri-map-line";
   const eyebrowIcon = document.createElement("i");
   eyebrowIcon.className = iconClass;
   eyebrowIcon.setAttribute("aria-hidden", "true");
@@ -63,10 +70,7 @@ const createDestinationCard = (destination) => {
   country.innerHTML = '<i class="ri-map-pin-line" aria-hidden="true"></i>';
   country.append(document.createTextNode(` ${destination.country}`));
 
-  const footer = document.createElement("div");
-  footer.className = "destination_card-footer";
-
-  body.append(eyebrow, title, description, country, footer);
+  body.append(eyebrow, title, description, country);
   card.append(imageContainer, body);
 
   return card;
@@ -76,7 +80,9 @@ if (destinationContainer) {
   fetch("/public/static/destinations.json")
     .then((response) => {
       if (!response.ok) {
-        throw new Error(`No se pudieron cargar los destinos (${response.status}).`);
+        throw new Error(
+          `No se pudieron cargar los destinos (${response.status}).`,
+        );
       }
       return response.json();
     })
@@ -105,8 +111,10 @@ if (destinationContainer) {
         .sort(([countryA], [countryB]) => {
           const orderA = countryOrder.indexOf(countryA);
           const orderB = countryOrder.indexOf(countryB);
-          return (orderA < 0 ? countryOrder.length : orderA) -
-            (orderB < 0 ? countryOrder.length : orderB);
+          return (
+            (orderA < 0 ? countryOrder.length : orderA) -
+            (orderB < 0 ? countryOrder.length : orderB)
+          );
         })
         .map(([country, countryDestinations]) => {
           const group = document.createElement("section");
@@ -148,9 +156,11 @@ if (destinationContainer) {
               .querySelectorAll(".destination_country.destination-open")
               .forEach((openGroup) => {
                 openGroup.classList.remove("destination-open");
-                openGroup.querySelector(".destination_country-toggle")
+                openGroup
+                  .querySelector(".destination_country-toggle")
                   .setAttribute("aria-expanded", "false");
-                openGroup.querySelector(".destination_country-panel").inert = true;
+                openGroup.querySelector(".destination_country-panel").inert =
+                  true;
               });
 
             if (shouldOpen) {
