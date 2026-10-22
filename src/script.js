@@ -310,6 +310,55 @@ const animateHeroSlide = (swiper) => {
   }
 };
 
+/*=============== GSAP FLEET ===============*/
+const getActiveFleetCardContent = (swiper) => {
+  const activeSlide = swiper.slides[swiper.activeIndex];
+  return activeSlide?.querySelector(".fleet_card-animated");
+};
+
+const prepareFleetCardAnimation = (swiper) => {
+  if (swiper.params.slidesPerView !== 1) {
+    const contents = [...swiper.slides].flatMap((slide) =>
+      [...slide.querySelectorAll(".fleet_card-animated")],
+    );
+    gsap.killTweensOf(contents);
+    gsap.set(contents, { clearProps: "transform,opacity,visibility" });
+    return;
+  }
+
+  const content = getActiveFleetCardContent(swiper);
+  if (!content || typeof gsap === "undefined") return;
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    gsap.set(content, { clearProps: "transform,opacity,visibility" });
+    return;
+  }
+
+  gsap.killTweensOf(content);
+  gsap.set(content, { y: 28, autoAlpha: 0 });
+};
+
+const animateFleetCard = (swiper) => {
+  if (swiper.params.slidesPerView !== 1) return;
+
+  const content = getActiveFleetCardContent(swiper);
+  if (!content || typeof gsap === "undefined") return;
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    gsap.set(content, { clearProps: "transform,opacity,visibility" });
+    return;
+  }
+
+  gsap.killTweensOf(content);
+  gsap.to(content, {
+    y: 0,
+    autoAlpha: 1,
+    duration: 0.75,
+    ease: "power3.out",
+    clearProps: "opacity,visibility,transform",
+  });
+};
+
 /*=============== SWIPERJS MASTER ===============*/
 const swiperMaster = new Swiper('.hero_swiper', {
   effect: 'fade',
@@ -361,6 +410,14 @@ const syncFleetSwiper = () => {
         renderBullet: function (index, className) {
           return `<span class="${className}">${String(index + 1).padStart(2, "0")}</span>`;
         },
+      },
+      on: {
+        init: (swiper) => {
+          prepareFleetCardAnimation(swiper);
+          animateFleetCard(swiper);
+        },
+        slideChangeTransitionStart: prepareFleetCardAnimation,
+        slideChangeTransitionEnd: animateFleetCard,
       },
     });
   } else if (fleetSwiper) {

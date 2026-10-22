@@ -9,13 +9,14 @@
   --display-color: #d5dfeb;
 
   /* Gradiente multi-parada con tonos oro metálicos idénticos a la imagen */
-  --gradient-color: linear-gradient(
+  --gold-gradient: linear-gradient(
     180deg, 
     #f4d068 0%,   /* Oro claro superior */
     #cfa13b 40%,  /* Oro medio */
     #ae7f23 70%,  /* Oro viejo profundo */
     #e7c65f 100%  /* Reflejo brillante inferior */
   );
+  --whatsapp-gradient: linear-gradient(90deg, #25d366 0%, #128c7e 100%);
   --special-color: rgb(255, 242, 0);
 
   --primary-color: #003b95;
@@ -170,6 +171,7 @@ svg {
   line-height: 1.8;
   flex-shrink: 0;
   padding-bottom: 3px;
+  max-width: none;
 }
 .section_eyebrow {
   font-size: 7px;
@@ -187,7 +189,7 @@ svg {
   background: currentColor;
 }
 .bg_clip-text {
-  background: var(--gradient-color);
+  background: var(--gold-gradient);
   
   /* Propiedades esenciales de recorte */
   -webkit-background-clip: text;
@@ -432,6 +434,7 @@ svg {
 }
 
 .hero_antetitle {
+  text-transform: uppercase;
   font-size: 8px;
   letter-spacing: 1.5px;
   align-items: center;
@@ -479,7 +482,7 @@ svg {
   /* font-weight: 900; */
   text-transform: uppercase;
   display: inline-flex; 
-  background: var(--gradient-color);
+  background: var(--gold-gradient);
   text-shadow: initial;
   letter-spacing: -1px;
   
@@ -1101,7 +1104,8 @@ svg {
   outline-offset: 4px;
 }
 
-.destination_footer {
+.destination_footer,
+.fleet_footer {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
@@ -1111,29 +1115,35 @@ svg {
   font-size: 11px;
   color: var(--muted-color);
 }
-.destination_footer span {
+.destination_footer span,
+.fleet_footer span {
   display: flex;
   gap: 8px;
   align-items: center;
 }
-.destination_footer span i {
+.destination_footer span i,
+.fleet_footer span i  {
   font-size: 19px;
 }
-.destination_footer strong {
+.destination_footer strong,
+.fleet_footer strong {
   font-weight: 400;
   color: var(--primary-color);
 }
-.destination_footer a {
+.destination_footer a,
+.fleet_footer a {
   display: flex;
   gap: 9px;
   align-items: center;
   border-bottom: 1px solid var(--display-color);
   padding-bottom: 3px;
 }
-.destination_footer a i {
+.destination_footer a i,
+.fleet_footer a i {
   font-size: 16px;
 }
-.destination_footer a:hover {
+.destination_footer a:hover,
+.fleet_footer a:hover {
   color: var(--primary-color);
   border-color: var(--primary-color);
 }
@@ -1166,8 +1176,6 @@ svg {
 /*=============== ABOUT ===============*/
 .about {
   align-items: center;
-  padding-top: 119px;
-  padding-bottom: 119px;
 }
 .about_heading {
   display: flex;
@@ -1187,9 +1195,6 @@ svg {
   font-weight: 500;
   letter-spacing: -2px;
   line-height: 1.17;
-}
-.about_description {
-  max-width: none;
 }
 .about_image {
   position: relative;
@@ -1300,7 +1305,7 @@ svg {
 }
 .fleet_content {
   min-width: 0;
-  margin-top: 56px;
+  margin-top: calc(26px + 58px);
 }
 .fleet_swiper {
   width: 100%;
@@ -1391,7 +1396,7 @@ svg {
   font-size: 19px;
   font-weight: 550;
   letter-spacing: -0.5px;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 .fleet_card-bottom p {
   font-size: 11px;
@@ -1418,20 +1423,6 @@ svg {
 }
 .footer_card-bottom span i {
   font-size: 16px;
-}
-.fleet_footer {
-  display: flex;
-  justify-content: center;
-  gap: 9px;
-  line-height: 1.7;
-  font-size: 10px;
-  align-items: center;
-  margin-top: 23px;
-  text-align: left;
-  color: var(--muted-color);
-}
-.fleet_footer i {
-  font-size: 15px;
 }
 
 /* ==================== FAQ ==================== */
@@ -1629,6 +1620,7 @@ svg {
   letter-spacing: 1.2px;
   color: var(--muted-color);
   margin-bottom: 7px;
+  text-transform: uppercase;
 }
 .footer_location {
   position: relative;
@@ -1703,7 +1695,7 @@ svg {
 }
 .floating_contact:hover {
   transform: translateY(-4px);
-  background: var(--primary-muted-color);
+  background: var(--whatsapp-gradient);
 }
 
 /*=============== SCROLL BAR ===============*/
@@ -1862,6 +1854,9 @@ svg {
     font-size: 10px;
     letter-spacing: 1.8px;
   }
+  .section_description {
+    max-width: 420px;
+  }
   .button {
     font-size: 12px;
     gap: 12px;
@@ -1976,7 +1971,8 @@ svg {
   .destination_card-price {
     font-size: 10px;
   }
-  .destination_footer {
+  .destination_footer,
+  .fleet_footer {
     flex-direction: row;
   }
 
@@ -2018,9 +2014,6 @@ svg {
     font-size: clamp(38px, 4.2vw, 61px);
     letter-spacing: -2.9px;
     line-height: 1.12;
-  }
-  .about_description {
-    max-width: 420px;
   }
   .about_benefits {
     gap: 23px;
@@ -2240,9 +2233,6 @@ svg {
   }
   .fleet_card {
     padding: 22px 18px 0;
-  }
-  .fleet_card-bottom {
-    text-align: center;
   }
 }
 
