@@ -298,14 +298,14 @@
   },
   {
     "number": "28",
-    "title": "Movie Cars Entertainment",
-    "tag": "UN MUNDO DE PELÍCULAS",
+    "title": "Movie Cars - Wonder Park Foz",
+    "tag": "UM PARQUE. CINCO MUNDOS",
     "subtitle": "AUTOS ICÓNICOS Y ESCENARIOS DE CINE",
-    "description": "Recorré una atracción temática que reúne vehículos emblemáticos del cine y la cultura popular en escenarios preparados para sorprender a grandes y chicos. Una experiencia ideal para los amantes de las películas, los autos y las fotografías.",
+    "description": "Cinema, luzes, água, jogos e diversão gigante. Cinco experiências em um só lugar para transformar sua visita em uma história inesquecível. Na Terra das Cataratas, o Wonder Park Foz reúne mundos para explorar de dia e de noite. Do universo do cinema à magia das luzes, há sempre uma nova experiência esperando por você.",
     "country": "BRASIL",
     "image": "/public/images/destino - Movie Cars Entertainment.webp",
     "icon": "<i class='ri-team-line'></i>",
-    "infoUrl": "https://www.google.com/maps/search/?api=1&query=Movie+Cars+Entertainment+Foz+do+Iguacu"
+    "infoUrl": "https://wonderparkfoz.com.br"
   },
   {
     "number": "29",
@@ -316,7 +316,7 @@
     "country": "BRASIL",
     "image": "/public/images/destino - Parque Acuático de Foz do Iguaçu.jpg",
     "icon": "<i class='ri-team-line'></i>",
-    "infoUrl": "https://www.google.com/maps/search/?api=1&query=Parque+acuatico+Foz+do+Iguacu"
+    "infoUrl": "https://aquamania.com.br"
   },
   {
     "number": "30",
@@ -327,7 +327,7 @@
     "country": "PARAGUAY",
     "image": "/public/images/destino - Saltos del Monday.webp",
     "icon": "<i class='ri-landscape-line'></i>",
-    "infoUrl": "https://visitparaguay.travel/places/saltos-del-monday"
+    "infoUrl": "https://www.parqueaventuramonday.com"
   },
   {
     "number": "31",
@@ -338,7 +338,7 @@
     "country": "PARAGUAY",
     "image": "/public/images/destino - Compras en Ciudad del Este.webp",
     "icon": "<i class='ri-shopping-bag-line'></i>",
-    "infoUrl": "https://www.google.com/maps/search/?api=1&query=Shopping+Ciudad+del+Este+Paraguay"
+    "infoUrl": "https://comprasparaguay.com.ar"
   },
   {
     "number": "32",
