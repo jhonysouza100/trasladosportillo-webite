@@ -8,7 +8,7 @@
     "country": "ARGENTINA",
     "image": "/public/images/destino - cataratas-iguazu.webp",
     "icon": "<i class='ri-tree-line'></i>",
-    "infoUrl": "https://www.argentina.gob.ar/parquesnacionales/nea/parque-nacional-iguazu"
+    "infoUrl": "https://iguazuargentina.com"
   },
   {
     "number": "02",
@@ -19,7 +19,7 @@
     "country": "ARGENTINA",
     "image": "/public/images/destino - Aeropuerto Internacional de Puerto Iguazú (IGR).jpg",
     "icon": "<i class='ri-plane-line'></i>",
-    "infoUrl": "https://www.google.com/maps/search/?api=1&query=Aeropuerto+Internacional+Puerto+Iguazu+IGR"
+    "infoUrl": "https://www.aeropuertosargentina.com/es/IGR"
   },
   {
     "number": "03",
@@ -52,7 +52,7 @@
     "country": "ARGENTINA",
     "image": "/public/images/destino - aripuca-iguazu.webp",
     "icon": "<i class='ri-plant-line'></i>",
-    "infoUrl": "https://www.google.com/maps/search/?api=1&query=La+Aripuca+Puerto+Iguazu"
+    "infoUrl": "https://www.aripuca.com.ar"
   },
   {
     "number": "06",
@@ -118,7 +118,7 @@
     "country": "ARGENTINA",
     "image": "/public/images/destino - Madero Tango Iguazú.webp",
     "icon": "<i class='ri-music-2-line'></i>",
-    "infoUrl": "https://visitiguazu.travel/atractivos/atractivos-turisticos-de-iguazu/"
+    "infoUrl": "https://www.maderotangoiguazu.com"
   },
   {
     "number": "12",
@@ -129,7 +129,7 @@
     "country": "ARGENTINA",
     "image": "/public/images/destino - IceBar Iguazú.webp",
     "icon": "<i class='ri-snowflake-line'></i>",
-    "infoUrl": "https://www.google.com/maps/search/?api=1&query=IceBar+Iguazu+Argentina"
+    "infoUrl": "https://elementpark.com.ar/event/35945"
   },
   {
     "number": "13",
@@ -140,7 +140,7 @@
     "country": "ARGENTINA",
     "image": "/public/images/destino - Fly Park Iguazú.webp",
     "icon": "<i class='ri-flashlight-line'></i>",
-    "infoUrl": "https://visitiguazu.travel/atractivos/aventura/"
+    "infoUrl": "https://elementpark.com.ar/event/35946"
   },
   {
     "number": "14",
@@ -250,7 +250,7 @@
     "country": "BRASIL",
     "image": "/public/images/destino - Mezquita Omar Ibn Al-Khattab.jpeg",
     "icon": "<i class='ri-building-4-line'></i>",
-    "infoUrl": "https://www.google.com/maps/search/?api=1&query=Mesquita+Omar+Ibn+Al-Khattab+Foz+do+Iguacu"
+    "infoUrl": "https://www.mesquitafoz.com.br/br"
   },
   {
     "number": "24",
@@ -261,18 +261,18 @@
     "country": "BRASIL",
     "image": "/public/images/destino - Yup Star Foz.webp",
     "icon": "<i class='ri-image-line'></i>",
-    "infoUrl": "https://www.google.com/maps/search/?api=1&query=Yup+Star+Foz+do+Iguacu"
+    "infoUrl": "https://foz.yupstar.com.br/as-rodas/yup-star-foz/"
   },
   {
     "number": "25",
-    "title": "Paseo en helicóptero sobre las Cataratas",
+    "title": "Paseo en helicóptero sobre las Cataratas - Helisul",
     "tag": "UNA EXPERIENCIA EXCLUSIVA",
     "subtitle": "IGUAZÚ DESDE EL AIRE",
     "description": "Contemplá las Cataratas del Iguazú desde una perspectiva extraordinaria. Un paseo aéreo para admirar la inmensidad de los saltos, la selva misionera y los paisajes de la región desde las alturas.",
     "country": "BRASIL",
     "image": "/public/images/destino - Paseo en helicóptero sobre las Cataratas.webp",
     "icon": "<i class='ri-image-line'></i>",
-    "infoUrl": "https://www.google.com/maps/search/?api=1&query=Paseo+helicoptero+Cataratas+Foz+do+Iguacu"
+    "infoUrl": "https://passeiodehelicoptero.com.br"
   },
   {
     "number": "26",
@@ -283,29 +283,29 @@
     "country": "BRASIL",
     "image": "/public/images/destino - Museo de Cera Dreamland.webp",
     "icon": "<i class='ri-team-line'></i>",
-    "infoUrl": "https://www.google.com/maps/search/?api=1&query=Museu+de+Cera+Dreamland+Foz+do+Iguacu"
+    "infoUrl": "https://dreamsparkshow.com.br/museu-de-cera-foz-do-iguacu/"
   },
   {
     "number": "27",
     "title": "Rafain Churrascaria Show",
     "tag": "GASTRONOMÍA Y ESPECTÁCULO",
-    "subtitle": "SABORES BRASILEÑOS Y SHOW INTERNACIONAL",
+    "subtitle": "UN SHOW DE SABORES Y CULTURAS",
     "description": "Disfrutá de una experiencia gastronómica con una tradicional churrascaría brasileña y un espectáculo de música y danzas latinoamericanas. Una propuesta ideal para completar tu visita a Foz do Iguaçu con una noche de sabores y entretenimiento.",
     "country": "BRASIL",
     "image": "/public/images/destino - Rafain Churrascaria Show.webp",
     "icon": "<i class='ri-restaurant-line'></i>",
-    "infoUrl": "https://www.google.com/maps/search/?api=1&query=Rafain+Churrascaria+Show+Foz+do+Iguacu"
+    "infoUrl": "https://www.rafainchurrascaria.com.br"
   },
   {
     "number": "28",
-    "title": "Movie Cars Entertainment",
-    "tag": "UN MUNDO DE PELÍCULAS",
-    "subtitle": "AUTOS ICÓNICOS Y ESCENARIOS DE CINE",
-    "description": "Recorré una atracción temática que reúne vehículos emblemáticos del cine y la cultura popular en escenarios preparados para sorprender a grandes y chicos. Una experiencia ideal para los amantes de las películas, los autos y las fotografías.",
+    "title": "Wonder Park Foz",
+    "tag": "DEL CINE A LA MAGIA DE LAS LUCES",
+    "subtitle": "CINCO MUNDOS EN UN LUGAR",
+    "description": "Cine, luces, agua, juegos y diversión a lo grande. Cinco experiencias en un solo lugar para transformar tu visita en una historia inolvidable. En la Tierra de las Cataratas, Wonder Park Foz reúne mundos para explorar de día y de noche. Desde el universo del cine hasta la magia de las luces, siempre hay una nueva experiencia esperándote.",
     "country": "BRASIL",
     "image": "/public/images/destino - Movie Cars Entertainment.webp",
     "icon": "<i class='ri-team-line'></i>",
-    "infoUrl": "https://www.google.com/maps/search/?api=1&query=Movie+Cars+Entertainment+Foz+do+Iguacu"
+    "infoUrl": "https://wonderparkfoz.com.br"
   },
   {
     "number": "29",
@@ -316,7 +316,7 @@
     "country": "BRASIL",
     "image": "/public/images/destino - Parque Acuático de Foz do Iguaçu.jpg",
     "icon": "<i class='ri-team-line'></i>",
-    "infoUrl": "https://www.google.com/maps/search/?api=1&query=Parque+acuatico+Foz+do+Iguacu"
+    "infoUrl": "https://aquamania.com.br"
   },
   {
     "number": "30",
@@ -327,7 +327,7 @@
     "country": "PARAGUAY",
     "image": "/public/images/destino - Saltos del Monday.webp",
     "icon": "<i class='ri-landscape-line'></i>",
-    "infoUrl": "https://visitparaguay.travel/places/saltos-del-monday"
+    "infoUrl": "https://www.parqueaventuramonday.com"
   },
   {
     "number": "31",
@@ -338,7 +338,7 @@
     "country": "PARAGUAY",
     "image": "/public/images/destino - Compras en Ciudad del Este.webp",
     "icon": "<i class='ri-shopping-bag-line'></i>",
-    "infoUrl": "https://www.google.com/maps/search/?api=1&query=Shopping+Ciudad+del+Este+Paraguay"
+    "infoUrl": "https://comprasparaguay.com.ar"
   },
   {
     "number": "32",
