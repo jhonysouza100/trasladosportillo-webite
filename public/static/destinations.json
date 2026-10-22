@@ -8,7 +8,7 @@
     "country": "ARGENTINA",
     "image": "/public/images/destino - cataratas-iguazu.webp",
     "icon": "<i class='ri-tree-line'></i>",
-    "infoUrl": "https://www.argentina.gob.ar/parquesnacionales/nea/parque-nacional-iguazu"
+    "infoUrl": "https://iguazuargentina.com"
   },
   {
     "number": "02",
@@ -19,7 +19,7 @@
     "country": "ARGENTINA",
     "image": "/public/images/destino - Aeropuerto Internacional de Puerto Iguazú (IGR).jpg",
     "icon": "<i class='ri-plane-line'></i>",
-    "infoUrl": "https://www.google.com/maps/search/?api=1&query=Aeropuerto+Internacional+Puerto+Iguazu+IGR"
+    "infoUrl": "https://www.aeropuertosargentina.com/es/IGR"
   },
   {
     "number": "03",
@@ -52,7 +52,7 @@
     "country": "ARGENTINA",
     "image": "/public/images/destino - aripuca-iguazu.webp",
     "icon": "<i class='ri-plant-line'></i>",
-    "infoUrl": "https://www.google.com/maps/search/?api=1&query=La+Aripuca+Puerto+Iguazu"
+    "infoUrl": "https://www.aripuca.com.ar"
   },
   {
     "number": "06",
@@ -118,7 +118,7 @@
     "country": "ARGENTINA",
     "image": "/public/images/destino - Madero Tango Iguazú.webp",
     "icon": "<i class='ri-music-2-line'></i>",
-    "infoUrl": "https://visitiguazu.travel/atractivos/atractivos-turisticos-de-iguazu/"
+    "infoUrl": "https://www.maderotangoiguazu.com"
   },
   {
     "number": "12",
@@ -129,7 +129,7 @@
     "country": "ARGENTINA",
     "image": "/public/images/destino - IceBar Iguazú.webp",
     "icon": "<i class='ri-snowflake-line'></i>",
-    "infoUrl": "https://www.google.com/maps/search/?api=1&query=IceBar+Iguazu+Argentina"
+    "infoUrl": "https://elementpark.com.ar/event/35945"
   },
   {
     "number": "13",
@@ -140,7 +140,7 @@
     "country": "ARGENTINA",
     "image": "/public/images/destino - Fly Park Iguazú.webp",
     "icon": "<i class='ri-flashlight-line'></i>",
-    "infoUrl": "https://visitiguazu.travel/atractivos/aventura/"
+    "infoUrl": "https://elementpark.com.ar/event/35946"
   },
   {
     "number": "14",
