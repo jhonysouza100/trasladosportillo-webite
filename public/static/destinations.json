@@ -250,7 +250,7 @@
     "country": "BRASIL",
     "image": "/public/images/destino - Mezquita Omar Ibn Al-Khattab.jpeg",
     "icon": "<i class='ri-building-4-line'></i>",
-    "infoUrl": "https://www.google.com/maps/search/?api=1&query=Mesquita+Omar+Ibn+Al-Khattab+Foz+do+Iguacu"
+    "infoUrl": "https://www.mesquitafoz.com.br/br"
   },
   {
     "number": "24",
@@ -261,18 +261,18 @@
     "country": "BRASIL",
     "image": "/public/images/destino - Yup Star Foz.webp",
     "icon": "<i class='ri-image-line'></i>",
-    "infoUrl": "https://www.google.com/maps/search/?api=1&query=Yup+Star+Foz+do+Iguacu"
+    "infoUrl": "https://foz.yupstar.com.br/as-rodas/yup-star-foz/"
   },
   {
     "number": "25",
-    "title": "Paseo en helicóptero sobre las Cataratas",
+    "title": "Paseo en helicóptero sobre las Cataratas - Helisul",
     "tag": "UNA EXPERIENCIA EXCLUSIVA",
     "subtitle": "IGUAZÚ DESDE EL AIRE",
     "description": "Contemplá las Cataratas del Iguazú desde una perspectiva extraordinaria. Un paseo aéreo para admirar la inmensidad de los saltos, la selva misionera y los paisajes de la región desde las alturas.",
     "country": "BRASIL",
     "image": "/public/images/destino - Paseo en helicóptero sobre las Cataratas.webp",
     "icon": "<i class='ri-image-line'></i>",
-    "infoUrl": "https://www.google.com/maps/search/?api=1&query=Paseo+helicoptero+Cataratas+Foz+do+Iguacu"
+    "infoUrl": "https://passeiodehelicoptero.com.br"
   },
   {
     "number": "26",
@@ -283,24 +283,24 @@
     "country": "BRASIL",
     "image": "/public/images/destino - Museo de Cera Dreamland.webp",
     "icon": "<i class='ri-team-line'></i>",
-    "infoUrl": "https://www.google.com/maps/search/?api=1&query=Museu+de+Cera+Dreamland+Foz+do+Iguacu"
+    "infoUrl": "https://dreamsparkshow.com.br/museu-de-cera-foz-do-iguacu/"
   },
   {
     "number": "27",
     "title": "Rafain Churrascaria Show",
     "tag": "GASTRONOMÍA Y ESPECTÁCULO",
-    "subtitle": "SABORES BRASILEÑOS Y SHOW INTERNACIONAL",
+    "subtitle": "UN SHOW DE SABORES Y CULTURAS",
     "description": "Disfrutá de una experiencia gastronómica con una tradicional churrascaría brasileña y un espectáculo de música y danzas latinoamericanas. Una propuesta ideal para completar tu visita a Foz do Iguaçu con una noche de sabores y entretenimiento.",
     "country": "BRASIL",
     "image": "/public/images/destino - Rafain Churrascaria Show.webp",
     "icon": "<i class='ri-restaurant-line'></i>",
-    "infoUrl": "https://www.google.com/maps/search/?api=1&query=Rafain+Churrascaria+Show+Foz+do+Iguacu"
+    "infoUrl": "https://www.rafainchurrascaria.com.br"
   },
   {
     "number": "28",
-    "title": "Movie Cars - Wonder Park Foz",
-    "tag": "UM PARQUE. CINCO MUNDOS",
-    "subtitle": "AUTOS ICÓNICOS Y ESCENARIOS DE CINE",
+    "title": "Wonder Park Foz",
+    "tag": "DEL CINE A LA MAGIA DE LAS LUCES",
+    "subtitle": "CINCO MUNDOS EM UM LUGAR",
     "description": "Cinema, luzes, água, jogos e diversão gigante. Cinco experiências em um só lugar para transformar sua visita em uma história inesquecível. Na Terra das Cataratas, o Wonder Park Foz reúne mundos para explorar de dia e de noite. Do universo do cinema à magia das luzes, há sempre uma nova experiência esperando por você.",
     "country": "BRASIL",
     "image": "/public/images/destino - Movie Cars Entertainment.webp",
